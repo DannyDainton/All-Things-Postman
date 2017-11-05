@@ -1,0 +1,32 @@
+{
+	"info": {
+		"name": "Restful_Booker_Collection",
+		"_postman_id": "458cd61d-7a9a-a85e-c8a4-d1a5eac15420",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ping the API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/ping",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"ping"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
