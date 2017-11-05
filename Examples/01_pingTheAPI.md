@@ -47,7 +47,7 @@ Enter the base URL of the Restful-Booker API `https://restful-booker.herokuapp.c
 
 ![Ping Request](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Ping.gif)
 
-#### The Reponse data
+#### The Response data
 
 ![Ping Response](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Ping_Response.PNG)
 
