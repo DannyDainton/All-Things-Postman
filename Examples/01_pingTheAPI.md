@@ -2,7 +2,7 @@
 
 In this example we will make a request to the `/ping` route and examine the response data.
 
-A simple route such as `/ping` is a cheap way of providing quick feedback about the status of the API. Depending on the type of the API, you may not have consumers requesting data 24/7 so how can we be sure that the API is still alive? We use a similar method in my team that we display on a Grafana dashboard (See image below) - This has an alert attached to the metric so we can be notified of any potentail problems.
+A simple route such as `/ping` is a cheap way of providing quick feedback about the status of the API. Depending on the type of the API, you may not have consumers requesting data 24/7 so how can we be sure that the API is still alive? We use a similar method in my team that we display on a Grafana dashboard (See image below) - This has an alert attached to the metric so we can be notified of any potential problems.
 
 ![Grafana Heartbeat](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Grafana_Heartbeat.PNG)
 
@@ -55,7 +55,7 @@ From a very simple request we can gather lots of useful information about respon
 
 ##### That's interesting...
 
-According to the documentaion provided, we should be seeing a `200 OK` response back from our request. Have we found our very first issue? Is the API correct in returning a `201 Created` or is the documentation out of date? For me, that's an invitation to start a conversation with the developer to confirm what the expected or desired behavior is for this route.
+According to the documentation provided, we should be seeing a `200 OK` response back from our request. Have we found our very first issue? Is the API correct in returning a `201 Created` or is the documentation out of date? For me, that's an invitation to start a conversation with the developer to confirm what the expected or desired behavior is for this route.
 
 That's the very first example complete - I've purposely started very basic and the pace might not suit people that already have a good understanding of the tool already but this will become more advanced very soon so please stick with it. :)
 
@@ -64,7 +64,7 @@ That's the very first example complete - I've purposely started very basic and t
 
 > "A Postman Collection lets you group individual requests together. These requests can be further organized into folders."
 
-As there is going to be a whole bunch of examples within this repository, let's create a Collection for all the lovely requests we'll be making. There are a few differnt ways of creating these, the quickest way is selecting the `New Collection` icon which can be found under the `Collections` tab.
+As there is going to be a whole bunch of examples within this repository, let's create a Collection for all the lovely requests we'll be making. There are a few different ways of creating these, the quickest way is selecting the `New Collection` icon which can be found under the `Collections` tab.
 
 ![Create Collection](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Create_Collections.PNG)
 
