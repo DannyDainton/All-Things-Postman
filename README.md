@@ -27,13 +27,13 @@ These are both excellent REST clients and well worth checking out - Ultimately, 
 
 ## Let's get started!
 
-I've made a huge assumption that if you're reading this you will probably have Postman downloaded and installed on your machine already - If you don't that is not a problem, just head over to the [Postman](https://www.getpostman.com/) site and grab the flavour that suits your OS. Once you're done - Be sure to come back again. :)
+I've made a huge assumption that if you're reading this you will probably have Postman downloaded and installed on your machine already - If you don't that is not a problem, just head over to the [Postman](https://www.getpostman.com/) site and grab the flavor that suits your OS. Once you're done - Be sure to come back again. :)
 
-The tool on it's own is quite useless, in order for us to start having some fun and making requests, we need an API with some endpoints that will return some data - This is where a wonderful resource provided by [Mark Winteringham](https://twitter.com/2bittester) comes in handy! Mark has created [Restful-Booker](https://restful-booker.herokuapp.com/), a safe place for people to learn more about API testing and a active platfrom to try out tools like Postman or any of the other REST clients mentioned.
+The tool on it's own is quite useless, in order for us to start having some fun and making requests, we need an API with some endpoints that will return some data - This is where a wonderful resource provided by [Mark Winteringham](https://twitter.com/2bittester) comes in handy! Mark has created [Restful-Booker](https://restful-booker.herokuapp.com/), a safe place for people to learn more about API testing and a active platform to try out tools like Postman or any of the other REST clients mentioned.
 
 > "Restful-booker is a Create Read Update Delete (CRUD) Web API that comes with authentication features and loaded with a bunch of bugs for you to explore"
 
-I would recommend taking a look through the API [documetation](https://restful-booker.herokuapp.com/) to get a feel for the type of requests we will be making within the example guides. We'll get very fimialir using the GET, POST, PUT and DELETE verbs and pairing these with the powerful features of Postman.
+I would recommend taking a look through the API [documentation](https://restful-booker.herokuapp.com/) to get a feel for the type of requests we will be making within the example guides. We'll get very familiar using the GET, POST, PUT and DELETE verbs and pairing these with the powerful features of Postman.
 
 All the requests that we will be making, will be included in a collection, that can be [imported](https://github.com/DannyDainton/All-Things-Postman/blob/master/Collections/importingCollections.md#import-collections-into-postman) directly into your local Postman application. It will start quite basic but we will be building these collections and incorporating features such as:
 
@@ -54,7 +54,7 @@ It will be an ever evolving space so if you would like me to add details coverin
 ## Example Guides
 ### 01 `GET` /ping
 
-In this example we will send a request using the `/ping` route to ensure that the API is active and able to recieve requests.
+In this example we will send a request using the `/ping` route to ensure that the API is active and able to receive requests.
 
 - [Ping the API](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/01_pingTheAPI.md)
 
