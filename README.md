@@ -5,7 +5,7 @@
 
 I've been using [Postman](https://getpostman.com) for a while now and I'm still uncovering features that I didn't even know existed - There are a number of How-To guides out there explaining how to use the tool's feature set but as the platform is constantly evolving these can become out of date, really quickly.
 
-My goal is to create a space where I can show examples of some of the many features in the tool and for it to also be a living piece of documentation, that will change over time to reflect the new changes being released. 
+My goal is to create a space where I can show examples of some of the many features in the tool and for it to also be a living piece of documentation, that will change over time to reflect the new changes being released.
 
 You can keep up to date with these changes via the [Change Log](https://www.getpostman.com/apps#changelog) and by subscribing to the Postman [Blog](http://blog.getpostman.com/).
 
@@ -15,7 +15,7 @@ One of the main reasons why I'm a fan of the tool is the supporting [documentati
 
 Before I start explaining the many different amazing and wonderful features of Postman, I just wanted to share a couple of links to some alternative REST clients - Just to prove that I'm not completely bias towards Postman :)
 
-## [Insomnia](https://insomnia.rest/) 
+## [Insomnia](https://insomnia.rest/)
 A similar tool to Postman and packed full of cool features. The ability to filter the response data is awesome! [Alan Richardson](https://twitter.com/eviltester) Created a great video explaining some of the features of the tool [3 Reasons to use Insomnia REST Client in your Exploratory API Testing](https://youtu.be/ErDCN_oU9a8).
 
 ## [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
@@ -27,7 +27,7 @@ These are both excellent REST clients and well worth checking out - Ultimately, 
 
 ## Let's get started!
 
-I've made a huge assumption that if you're reading this you will probably have Postman downloaded and installed on your machine already - If you don't that is not a problem, just head over to the [Postman](https://www.getpostman.com/) site and grab the flavor that suits your OS. Once you're done - Be sure to come back again. :)
+I've made a huge assumption that if you're reading this you will probably have Postman downloaded and installed on your machine already - If you don't that is not a problem, just head over to the [Postman](https://www.getpostman.com/) site and grab the flavour that suits your OS. Once you're done - Be sure to come back again. :)
 
 The tool on it's own is quite useless, in order for us to start having some fun and making requests, we need an API with some endpoints that will return some data - This is where a wonderful resource provided by [Mark Winteringham](https://twitter.com/2bittester) comes in handy! Mark has created [Restful-Booker](https://restful-booker.herokuapp.com/), a safe place for people to learn more about API testing and a active platform to try out tools like Postman or any of the other REST clients mentioned.
 
@@ -52,11 +52,20 @@ It will be an ever evolving space so if you would like me to add details coverin
 ---
 
 ## Example Guides
+
+All requests in the examples will be made to the Restful-Booker API - You can find the available endpoints [here](https://restful-booker.herokuapp.com/).
+
 ### 01 `GET` /ping
 
 In this example we will send a request using the `/ping` route to ensure that the API is active and able to receive requests.
 
 - [Ping the API](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/01_pingTheAPI.md)
+
+### 02 Create an Environment file
+
+In this example we will be creating an Environment file and using data from this file within our requests.
+
+- [Create environment file](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/02_createEnvironmentFile.md)
 
 ---
 ### More examples to follow shortly...

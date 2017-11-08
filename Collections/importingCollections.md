@@ -10,5 +10,7 @@ If everything has gone to plan, you should be able to see and use the Collection
 
 ![Import Collection](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Import_Collection.gif)
 
+The same process can also be followed to import environment files into Postman.
+
 ---
 [Back to the Examples](https://github.com/DannyDainton/All-Things-Postman#example-guides)

@@ -2,6 +2,8 @@
 
 In this example we will make a request to the `/ping` route and examine the response data.
 
+---
+
 A simple route such as `/ping` is a cheap way of providing quick feedback about the status of the API. Depending on the type of the API, you may not have consumers requesting data 24/7 so how can we be sure that the API is still alive? We use a similar method in my team that we display on a Grafana dashboard (See image below) - This has an alert attached to the metric so we can be notified of any potential problems.
 
 ![Grafana Heartbeat](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Grafana_Heartbeat.PNG)
@@ -24,7 +26,7 @@ setInterval(IsItAlive, 2000)
 
 To stop this we can use the `clearInterval({process Id})` method in the console. The process Id would have been placed in the Console when the polling started.
 
-See an example of this in action below. 
+See an example of this in action below.
 
 ![Health Check](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Health_Check.gif)
 
@@ -41,7 +43,7 @@ So before we really get going (honestly, we'll start soon) and this is just a pe
 
 #### Making our first Request
 
-By default, the tool opens all new requests with the `GET` verb and as this is what we're going to be using first, we're good to go. :) 
+By default, the tool opens all new requests with the `GET` verb and as this is what we're going to be using first, we're good to go. :)
 
 Enter the base URL of the Restful-Booker API `https://restful-booker.herokuapp.com` followed by the route that we would like to use `/ping` into the URL input field at the top of the tool. Press `send` or use the shortcut `CTRL+ENTER`. Congratulations, you've just sent your first request to the API.
 
