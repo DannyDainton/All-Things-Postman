@@ -51,7 +51,7 @@ When you add the final curly brace to the request, you will notice that the colo
 
 By hovering over the `red` value, you will see that it displays a tool tip with an `Unresolved Variable` message:
 
-![Unresolved Variable](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Unresolved_Variable.PNG)
+![Unresolved Variable](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Request_With_An_Environment_File.gif)
 
 Let's link this all up - Select the _Restful\_Booker\_Environment_ file from the dropdown list in the top right of the application. This will have a default value of _No Environment_ until one is selected or if none have previously been created.
 
