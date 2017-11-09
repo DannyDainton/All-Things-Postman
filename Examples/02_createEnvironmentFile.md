@@ -47,7 +47,7 @@ An alternative way of creating a new file is by using the `New` button, this can
 - Select the `Environment` option, this will open the `Manage Environments` feature on a new file ready to be edited
 - Complete the fields with the information you would like to use
 
-The clip below shows this process, I've used fake data this time as we have already create our file using the previous method.
+The clip below shows this process, I've used fake data this time as we have already created our file using the previous method.
 
 ![Alternative Create Environment ](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Alternative_Create_Environment.gif)
 
@@ -61,7 +61,7 @@ When you add the final curly brace to the request, you will notice that the colo
 
 By hovering over the `red` value, you will see that it displays a tool tip with an `Unresolved Variable` message:
 
-![Unresolved Variable](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Request_With_An_Environment_File.gif)
+![Unresolved Variable](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Unresolved_Variable.PNG)
 
 Let's link this all up - Select the _Restful\_Booker\_Environment_ file from the dropdown list in the top right of the application. This will have a default value of _No Environment_ until one is selected or if none have previously been created.
 
