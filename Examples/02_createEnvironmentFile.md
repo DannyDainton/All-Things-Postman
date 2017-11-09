@@ -26,7 +26,7 @@ In the clip, you can see that the only thing that is changing is the environment
 
 ### Creating our first environment file
 
-A new environment file can be created following the steps below. In our file, we will be setting the `baseURL` value to `https://restful-booker.herokuapp.com` and using this in all of our requests as we move through the examples.
+A new environment file can be created in a number of different ways. One way is by following the steps below. In the file, we will be setting the `baseURL` value to `https://restful-booker.herokuapp.com` and using this in all of our requests as we move through the examples.
 
 - Press the `cog` icon in the top right on the application, just above the `Save` button
 - Select the `Manage Environments` option
@@ -40,6 +40,16 @@ A new environment file can be created following the steps below. In our file, we
 This process can be seen in the clip below:
 
 ![Create an Environment file](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Create_An_Environment.gif)
+
+An alternative way of creating a new file is by using the `New` button, this can be found in the top left of the application.
+
+- Press the `down arrow` on the right side of the `New` button
+- Select the `Environment` option, this will open the `Manage Environments` feature on a new file ready to be edited
+- Complete the fields with the information you would like to use
+
+The clip below shows this process, I've used fake data this time as we have already create our file using the previous method.
+
+![Alternative Create Environment ](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Alternative_Create_Environment.gif)
 
 ### Referencing data from the file
 
@@ -65,7 +75,7 @@ That's it, we've completed this example - This is still the basics, the environm
 
 ### Finally...
 
-The eagle eyed amongst you would have noticed an `orange` dot in the request tab, this is Postman being awesome and telling you that have you have unsaved changes. You can save these changes, if you want to, by pressing the `Save` button to the right of the `Send` button. If you accidentally close the tab with unsaved changes, you will get a warning asking if you would like to save the changes before leaving. Phew! :) 
+The eagle eyed amongst you would have noticed an `orange` dot in the request tab, this is Postman being awesome and telling you that have you have unsaved changes. You can save these changes, if you want to, by pressing the `Save` button to the right of the `Send` button. If you accidentally close the tab with unsaved changes, you will get a warning asking if you would like to save the changes before leaving. Phew! :)
 
 ![Unsaved Changes](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Unsaved_Changes.PNG)
 
