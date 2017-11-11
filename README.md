@@ -67,5 +67,11 @@ In this example we will be creating an Environment file and using data from this
 
 - [Create environment file](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/02_createEnvironmentFile.md)
 
+### 03 `GET` /booking
+
+For this example we will be making requests to the `/booking` route and using some different parameters in the requests to filter the response data.
+
+- [Get all bookings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/03_getAllBookings.md)
+
 ---
 ### More examples to follow shortly...
