@@ -18,7 +18,7 @@ In order to get to the feature and start creating Presets, we need to open it up
 Once the steps above are followed, we can start adding data to our preset.
 
 - Give the header preset a `name` (I've called mine _Restful_Booker_Preset_Headers_)
-- Add some headers of you choice into the fields as `Key/Value` pairs
+- Add some headers of your choice into the fields as `Key/Value` pairs
 - Once you're finished, Press the `Add` button
 
 Here's an example of what I've added to mine. As you can you see, the Preset values can contain `variables` using the ```{{myVar}}``` syntax, we learnt how these work in a previous lesson.
