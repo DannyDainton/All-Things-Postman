@@ -96,7 +96,38 @@
 					"response": []
 				},
 				{
-					"name": "Get all bookings with the firstname parameter",
+					"name": "Get all bookings with the firstname and last name parameter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{baseURL}}/booking?firstname=sally&lastname=brown",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "firstname",
+									"value": "sally",
+									"equals": true
+								},
+								{
+									"key": "lastname",
+									"value": "brown",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get all bookings with the firstname  parameter",
 					"request": {
 						"method": "GET",
 						"header": [],
