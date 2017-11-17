@@ -75,7 +75,7 @@ For this example we will be making requests to the `/booking` route and using so
 
 ### 04 Preset Headers
 
-For this example we will be looking at the Pre-Set Headers feature.
+For this example we will be looking at the Preset Headers feature.
 
 - [Pre Set Headers](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/04_preSetHeaders.md)
 
@@ -83,6 +83,6 @@ For this example we will be looking at the Pre-Set Headers feature.
 
 In this example we will look at some of the methods of importing various different files into Postman.
 
-- [Importing Collections](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/05_importingFiles.md)
+- [Importing Files](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/05_importingFiles.md)
 ---
 ### More examples to follow shortly...
