@@ -32,7 +32,7 @@
 			]
 		},
 		{
-			"name": "Get all Requests",
+			"name": "Get all Bookings",
 			"description": "",
 			"item": [
 				{
@@ -224,6 +224,63 @@
 									"value": "2017-13-11",
 									"equals": true
 								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get a single booking",
+			"description": "",
+			"item": [
+				{
+					"name": "Get a single booking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{baseURL}}/booking/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single booking dynamically",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.environment.set(\"booking_id\", Math.floor((Math.random() * 10) + 1))"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{baseURL}}/booking/{{booking_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking",
+								"{{booking_id}}"
 							]
 						},
 						"description": ""
