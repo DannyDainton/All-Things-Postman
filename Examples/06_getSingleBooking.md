@@ -76,7 +76,7 @@ A couple of quick things that I have noticed when using the `application/xml` he
 
 ![Response Validation](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Response_Validation.PNG)
 
-Looking at the `Request Headers` - This is an area we will cover in more detail soon, we can see that the response `Content-Type` is `text/html`...There is clearly something strange happening here, it would need more time to dig into this issue more by either setting up a proxy tool like [Fiddler](https://www.telerik.com/fiddler) or even better, pairing up with the developer to investigate the issue together. I'm not going to go down that route now as it will shift the focus away from Postman.
+Looking at the `Response Headers` - This is an area we will cover in more detail soon, we can see that the response `Content-Type` is `text/html`...There is clearly something strange happening here, it would need more time to dig into this issue more by either setting up a proxy tool like [Fiddler](https://www.telerik.com/fiddler) or even better, pairing up with the developer to investigate the issue together. I'm not going to go down that route now as it will shift the focus away from Postman.
 
 ![Response Headers](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Response_Headers.PNG)
 
