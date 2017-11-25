@@ -42,7 +42,7 @@ Looking at the documentation for the Restful-Booker API, we have a couple of new
 
 Looking closer at the response data we can see that this returns an array of `Booking Ids`. Looking ahead at the documentation, I can see what these Id numbers relate too but we're going to stick with just this endpoint on this example.
 
-:question: As we test the API we will undoubtedly have questions - Mine will never be an extension list of questions, that's not my main focus for the examples but I will always note a few down along the way. :)
+:question: As we test the API we will undoubtedly have questions - Mine will never be an extensive list of questions, that's not my main focus for the examples but I will always note a few down along the way. :)
 
 - Should this be the `/bookings` route? It returns _all_ entries so should the route name be plural?
 - The ordering of the numbers returned, should these be in a sequential order (1, 2 , 3, etc.)?
@@ -60,13 +60,13 @@ We have a few to _play_ with here `firstname`, `lastname`, `checkin` and `checko
 
 `/booking?firstname=sally&lastname=brown`
 
-You can see the route `/booking` after this we have the `?` which starts the query, this is followed the parameter `firstname` which `=`'s a value, in this case it's `sally`. Parameters can be chained together using `&` this can be used to refine the data returned within the response.
+You can see the route `/booking` after this we have the `?` which starts the query, this is followed by the parameter `firstname` which `=`'s a value, in this case it's `sally`. Parameters can be chained together using `&`, this can be used to refine the data returned within the response.
 
 In Postman, we can enter these parameters in two different ways, written directly into the response or using the `Params` feature. The first way is _probably_ the easiest because you could paste the URL straight into the request field.
 
 ![Parameters Directly In Request](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Parameters_Directly_In_Request.PNG)
 
-The second way is using the a very handy `Params` feature, this is really cool as it constructs the query string for you, based on the entered values.
+The second way is using the very handy `Params` feature, this is really cool as it constructs the query string for you, based on the entered values.
 
 ![Params Feature](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Params_Feature.gif)
 
@@ -90,7 +90,7 @@ I don't want to list out all the issues that I've discovered while testing. This
 
 ### Some basic tests
 
-Using the `lastname` parameter and the example given in the documentation, I sent a request off and the response back was an empty array. I know that the value is a `name` so maybe the first letter is a Capitol e.g. `Brown` - This time a single entry was returned, this is telling me that the search functionality is not Case In-sensitive.
+Using the `lastname` parameter and the example given in the documentation, I sent a request off and the response back was an empty array. I know that the value is a `name` so maybe the first letter is a Capitol e.g. `Brown` - This time a single entry was returned, this is telling me that the search functionality is not case insensitive.
 
 ![Case Insensitive](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Case_Insensitive.gif)
 
@@ -100,7 +100,7 @@ Another issue found was around validation of the Date - I decided to break the r
 
 These are just a couple of basic tests but I'm sure you can have some fun exploring this endpoint and highlighting some more issues :)
 
-That's the end of this example. We have learnt how to administrate our collections by using a folder structure and also sending requests using query string parameters. More to come very soon.
+That's the end of this example. We have learnt how to organize our `Collections` by using a folder structure and also sending requests using query string parameters. More to come very soon.
 
 ---
 [Back to the Examples](https://github.com/DannyDainton/All-Things-Postman#example-guides)

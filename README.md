@@ -35,7 +35,7 @@ The tool on it's own is quite useless, in order for us to start having some fun 
 
 I would recommend taking a look through the API [documentation](https://restful-booker.herokuapp.com/) to get a feel for the type of requests we will be making within the example guides. We'll get very familiar using the GET, POST, PUT and DELETE verbs and pairing these with the powerful features of Postman.
 
-All the requests that we will be making, will be included in a collection, that can be [imported](https://github.com/DannyDainton/All-Things-Postman/blob/master/Collections/importingCollections.md#import-collections-into-postman) directly into your local Postman application. It will start quite basic but we will be building these collections and incorporating features such as:
+All the requests that we will be making, will be included in a collection, that can be imported directly into your local Postman application. It will start quite basic but we will be building these collections and incorporating features such as:
 
 - Environment and Global Variables
 - Preset Headers (Saving you a bunch of time)
@@ -72,6 +72,24 @@ In this example we will be creating an Environment file and using data from this
 For this example we will be making requests to the `/booking` route and using some different parameters in the requests to filter the response data.
 
 - [Get all bookings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/03_getAllBookings.md)
+
+### 04 Preset Headers
+
+For this example we will be looking at the Preset Headers feature.
+
+- [Pre Set Headers](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/04_preSetHeaders.md)
+
+### 05 Importing Files
+
+In this example we will look at some of the methods of importing various different files into Postman.
+
+- [Importing Files](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/05_importingFiles.md)
+
+### 06 `GET` /booking/{id}
+
+In this example we will be getting the data for a single booking from the API. We will explore the endpoint using `Request Headers` and also taking a basic look at the `Pre-request Scripts` feature to make our request a little bit more dynamic.
+
+- [Get a single booking](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/06_getSingleBooking.md)
 
 ---
 ### More examples to follow shortly...

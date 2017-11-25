@@ -8,7 +8,7 @@ In this second example I’d like to introduce you to `Manage Environments` this
 
 In Postman, we can create storage files to hold variables. These can be used in a specific `Collection` or they can be environment agnostic and used globally, on any request.
 
-We’re going to concentrate on the specific environment approach first and learn more about global variables in later examples. With most APIs, the `routes` will predominantly be the same no matter where that the service is running. The only thing that _normally_ changes between environments is the base path, in the previous example we made a request to the `/ping` route and shortly we'll be making requests to the `/booking` route in the next example, these both use the same base path `https://restful-booker.herokuapp.com`. During the course of the APIs development, it would _usually_ be developed and tested on multiple different environments before reaching production.
+We’re going to concentrate on the specific environment approach first and learn more about global variables in later examples. With most APIs, the `routes` will predominantly be the same no matter where that service is running. The only thing that _normally_ changes between environments is the base path, in the previous example we made a request to the `/ping` route and shortly we'll be making requests to the `/booking` route in the next example, these both use the same base path `https://restful-booker.herokuapp.com`. During the course of the APIs development, it would _usually_ be developed and tested on multiple different environments before reaching production.
 
 To bring this more to life, I've mocked the API using a tiny [Nodejs Express API](http://expressjs.com/). Our `Development` environment would have a base path of `dev-restful-booker` and our `Staging` environment would be `staging-restful-booker`, however, the route would be same everywhere.
 
@@ -75,7 +75,7 @@ That's it, we've completed this example - This is still the basics, the environm
 
 ### Finally...
 
-The eagle eyed amongst you would have noticed an `orange` dot in the request tab, this is Postman being awesome and telling you that have you have unsaved changes. You can save these changes, if you want to, by pressing the `Save` button to the right of the `Send` button. If you accidentally close the tab with unsaved changes, you will get a warning asking if you would like to save the changes before leaving. Phew! :)
+The eagle eyed amongst you would have noticed an `orange` dot in the request tab, this is Postman being awesome and telling you that you have unsaved changes. You can save these changes, if you want to, by pressing the `Save` button to the right of the `Send` button. If you accidentally close the tab with unsaved changes, you will get a warning asking if you would like to save the changes before leaving. Phew! :)
 
 ![Unsaved Changes](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Unsaved_Changes.PNG)
 
