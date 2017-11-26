@@ -25,7 +25,9 @@ Here's an example of what I've added to mine. As you can you see, the Preset val
 
 ![New Headers](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/New_Presets.PNG)  
 
-A point to note on the `Presets` and I really hope it's a feature request pending for Postman. The Preset headers don't have the same `Auto-Complete` feature as the main `Headers` section so there is a slight risk of miss configuring the header, which could cause your request to become invalid. The 2 clips below will explain what I mean.
+__Note__ : The `preset` headers don't have the same `Auto-Complete` feature as the main `Headers` section [Open support issue 3862](https://github.com/postmanlabs/postman-app-support/issues/3862). So there is a slight risk of misconfiguring the header, which could cause your request to become invalid. The 2 clips below will explain what I mean.
+
+
 
 The main Headers section with Auto-Complete:
 
