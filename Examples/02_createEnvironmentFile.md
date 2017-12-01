@@ -14,13 +14,13 @@ To bring this more to life, I've mocked the API using a tiny [Nodejs Express API
 
 Let's see an clip of this in action:
 
-![Different Environments](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Different_Environments.gif)
+![Different Environments](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/02_createEnvironmentFile/Different_Environments.gif)
 
 You can see that the `/ping` route is the same in both requests but the base path is different. So this is where the Postman `Environments` come into action. It's just a pain to manage separate collections for each environment, one central configurable file makes much more sense! :)
 
 This is jumping ahead slightly and we will be creating our own environment file and referencing the data values shortly but I wanted to show you a quick clip of the magic first:
 
-![Switching Environments](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Switch_Environments.gif)
+![Switching Environments](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/02_createEnvironmentFile/Switch_Environments.gif)
 
 In the clip, you can see that the only thing that is changing is the environment file being used for the requests. How about we create our own file and start using the syntax to reference the data.
 
@@ -39,7 +39,7 @@ A new environment file can be created in a number of different ways. One way is 
 
 This process can be seen in the clip below:
 
-![Create an Environment file](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Create_An_Environment.gif)
+![Create an Environment file](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/02_createEnvironmentFile/Create_An_Environment.gif)
 
 An alternative way of creating a new file is by using the `New` button, this can be found in the top left of the application.
 
@@ -49,27 +49,27 @@ An alternative way of creating a new file is by using the `New` button, this can
 
 The clip below shows this process, I've used fake data this time as we have already created our file using the previous method.
 
-![Alternative Create Environment ](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Alternative_Create_Environment.gif)
+![Alternative Create Environment ](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/02_createEnvironmentFile/Alternative_Create_Environment.gif)
 
 ### Referencing data from the file
 
 In order to use the data within the file that we just created, we need to reference this in the request. Postman uses a double curly brace at either end of the `key` to make the link to the `value`. This syntax looks like this ```{{myKey}}``` and this syntax can replace the `https://restful-booker.herokuapp.com` value that we already have in our request.
 
-![Set an environment value](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Set_An_Environment.gif)
+![Set an environment value](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/02_createEnvironmentFile/Set_An_Environment.gif)
 
 When you add the final curly brace to the request, you will notice that the colour changes to `red` this is Postman telling you that it knows that you want to reference something but it doesn't recognise what that thing is....yet! :)
 
 By hovering over the `red` value, you will see that it displays a tool tip with an `Unresolved Variable` message:
 
-![Unresolved Variable](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Unresolved_Variable.png)
+![Unresolved Variable](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/02_createEnvironmentFile/Unresolved_Variable.PNG)
 
 Let's link this all up - Select the _Restful\_Booker\_Environment_ file from the dropdown list in the top right of the application. This will have a default value of _No Environment_ until one is selected or if none have previously been created.
 
-![Use an environment file](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Use_Environment_File.gif)
+![Use an environment file](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/02_createEnvironmentFile/Use_Environment_File.gif)
 
 Once the _Restful\_Booker\_Environment_ file is selected, you will notice that the `red` value has now turned `orange`. If you hover over this value, you will see in the tooltip the variable being set from the environment file. Awesome! We are now ready to make our first request using data within an environment file...exciting! :)
 
-![Request with an Environment file](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Request_With_An_Environment_File.gif)
+![Request with an Environment file](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/02_createEnvironmentFile/Request_With_An_Environment_File.gif)
 
 That's it, we've completed this example - This is still the basics, the environment files can be used for many different things, which we will cover soon but just getting used to creating them and using the values from them is a great first step. More to come soon!
 
@@ -77,7 +77,7 @@ That's it, we've completed this example - This is still the basics, the environm
 
 The eagle eyed amongst you would have noticed an `orange` dot in the request tab, this is Postman being awesome and telling you that you have unsaved changes. You can save these changes, if you want to, by pressing the `Save` button to the right of the `Send` button. If you accidentally close the tab with unsaved changes, you will get a warning asking if you would like to save the changes before leaving. Phew! :)
 
-![Unsaved Changes](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Unsaved_Changes.PNG)
+![Unsaved Changes](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/02_createEnvironmentFile/Unsaved_Changes.PNG)
 
 ---
 [Back to the Examples](https://github.com/DannyDainton/All-Things-Postman#example-guides)

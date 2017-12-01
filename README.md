@@ -1,5 +1,6 @@
 # All-Things-Postman
-<img src="./Public/images/Postman_Logo.png">
+
+![Postman Logo](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/_README/Postman_Logo.PNG)  
 
 ## Why create this repository?
 
@@ -39,10 +40,11 @@ All the requests that we will be making, will be included in a collection, that 
 
 - Environment and Global Variables
 - Preset Headers (Saving you a bunch of time)
-- Pre-Requests (Writing basic Javascript to create new data with each request and other cool things)
-- Tests (Standard and Chai style assertions)
+- Pre-Request Scripts (Writing basic JavaScript to create new data with each request and other cool things)
+- Tests ([Chai](http://chaijs.com/api/) style assertions)
 - In-Built Test Runner
 - Newman command line collection runner
+- Postman Console
 - Many many more...
 
 The format will take the form of a series of individual pages where I will explain in a bit more detail what I'm actually doing in Postman when making the requests and this will be backed up by images, gifs, code snippets etc. to try and make the information come to life. I'm a Tester so you can expect me to make observations along the way and I will be noting these down but the main focus of the examples we always be, using Postman and it's features to request data from the Restful-Booker API.
@@ -90,6 +92,12 @@ In this example we will look at some of the methods of importing various differe
 In this example we will be getting the data for a single booking from the API. We will explore the endpoint using `Request Headers` and also taking a basic look at the `Pre-request Scripts` feature to make our request a little bit more dynamic.
 
 - [Get a single booking](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/06_getSingleBooking.md)
+
+### 07 Creating our first Test
+
+In this example we will be taking our first look at the `Tests` feature. We will create a basic test to assert against some response data returned from the Restful-Booker API.
+
+- [Creating Tests](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/07_creatingOurFirstTest.md)
 
 ---
 ### More examples to follow shortly...

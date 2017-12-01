@@ -16,11 +16,11 @@ Creating a new folder in a Collection is very simple, by following the steps bel
 - In the dialog box, Give the folder a name (Mine is called _Health Check_)
 - Finally, Press the `Create` button
 
-![Create Folder](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Create_Folder.gif)
+![Create Folder](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/03_getAllBookings/Create_Folder.gif)
 
 You can move requests around by dragging and dropping them into specific folders.
 
-![Put Request In Folders](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Put_Request_In_Folder.gif)
+![Put Request In Folders](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/03_getAllBookings/Put_Request_In_Folder.gif)
 
 Another method is to save them directly into a folder, I've created a _Get all Requests_ folder and we will save our first `/booking` request into this new folder.
 
@@ -30,7 +30,7 @@ Another method is to save them directly into a folder, I've created a _Get all R
 - Select the desired folder from the list of results
 - Finally, Press the `Save to {folder name}` button
 
-![Save Request To Folders](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Save_Request_To_Folder.gif)
+![Save Request To Folders](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/03_getAllBookings/Save_Request_To_Folder.gif)
 
 Once those steps are complete, the new requests will be saved into the _Get all Requests_ folder. Okay, so I think that's all the housekeeping for now, we'll now move forward and start making some requests.
 
@@ -38,7 +38,7 @@ Once those steps are complete, the new requests will be saved into the _Get all 
 
 Looking at the documentation for the Restful-Booker API, we have a couple of new things that we can use to explore the data returned. In most API endpoints you can use query string parameters to specify options that limit the data included in responses. Our first request to the `/booking` route will bring back _All_ the data within the system.
 
-![Booking Request](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Booking_Request.gif)
+![Booking Request](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/03_getAllBookings/Booking_Request.gif)
 
 Looking closer at the response data we can see that this returns an array of `Booking Ids`. Looking ahead at the documentation, I can see what these Id numbers relate too but we're going to stick with just this endpoint on this example.
 
@@ -54,7 +54,7 @@ To be honest, these are questions that could have been easily asked during the c
 
 Let's move forward and look at the different ways that we can filter the response data using the query string parameters available.
 
-![Booking Parameters](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Booking_Parameters.PNG)  
+![Booking Parameters](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/03_getAllBookings/Booking_Parameters.PNG)  
 
 We have a few to _play_ with here `firstname`, `lastname`, `checkin` and `checkout`. As per the documentation's example, these are used in the following way within the request:
 
@@ -64,11 +64,11 @@ You can see the route `/booking` after this we have the `?` which starts the que
 
 In Postman, we can enter these parameters in two different ways, written directly into the response or using the `Params` feature. The first way is _probably_ the easiest because you could paste the URL straight into the request field.
 
-![Parameters Directly In Request](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/Parameters_Directly_In_Request.PNG)
+![Parameters Directly In Request](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/03_getAllBookings/Parameters_Directly_In_Request.PNG)
 
 The second way is using the very handy `Params` feature, this is really cool as it constructs the query string for you, based on the entered values.
 
-![Params Feature](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Params_Feature.gif)
+![Params Feature](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/03_getAllBookings/Params_Feature.gif)
 
 ### Explore It!
 
@@ -82,9 +82,9 @@ The main piece of `Testing Wisdom` I always keep in my mind is this:
 
 From the API documentation we already know lots of valuable information about this endpoint and a number of variables that we can use to our advantage while exploring the `/booking` endpoint. We've been told that the query parameter types are `Strings` and `Dates` in the `CCYY-MM-DD` format. Using the two sections below, extracted from the cheat sheet, test the endpoint by changing and manipulating the parameters before sending the request to discover new information.  
 
-![THCS Strings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/THCS_Strings.PNG)
+![THCS Strings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/getAllBookings/THCS_Strings.PNG)
 
-![THCS DateTime](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/THCS_DateTime.PNG)
+![THCS DateTime](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/getAllBookings/THCS_DateTime.PNG)
 
 I don't want to list out all the issues that I've discovered while testing. This is a chance for you to interact with the endpoint and have fun while exploring within a safe environment.
 
@@ -92,11 +92,11 @@ I don't want to list out all the issues that I've discovered while testing. This
 
 Using the `lastname` parameter and the example given in the documentation, I sent a request off and the response back was an empty array. I know that the value is a `name` so maybe the first letter is a Capitol e.g. `Brown` - This time a single entry was returned, this is telling me that the search functionality is not case insensitive.
 
-![Case Insensitive](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Case_Insensitive.gif)
+![Case Insensitive](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/getAllBookings/Case_Insensitive.gif)
 
 Another issue found was around validation of the Date - I decided to break the rules by seeing how it would handle a 13th month in the date value, this resulted in a `500 Internal Server Error`. Oh dear! :(
 
-![Date Rules](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Date_Rules.gif)
+![Date Rules](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/getAllBookings/Date_Rules.gif)
 
 These are just a couple of basic tests but I'm sure you can have some fun exploring this endpoint and highlighting some more issues :)
 

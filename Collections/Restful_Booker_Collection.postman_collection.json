@@ -1,17 +1,29 @@
 {
 	"info": {
-		"name": "Restful_Booker_Collection",
-		"_postman_id": "25d3b6cb-57ff-47b0-aa9b-44a2982212ea",
+		"name": "Restful_Booker_Collection copy",
+		"_postman_id": "717ba516-a64a-c6a3-9e0d-f3fca385ba45",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Health Check",
-			"description": "",
 			"item": [
 				{
 					"name": "Ping the API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -24,8 +36,7 @@
 							"path": [
 								"ping"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				}
@@ -33,10 +44,22 @@
 		},
 		{
 			"name": "Get all Bookings",
-			"description": "",
 			"item": [
 				{
 					"name": "Get all bookings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -49,13 +72,25 @@
 							"path": [
 								"booking"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get all bookings with all parameters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -90,13 +125,25 @@
 									"equals": true
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get all bookings with the firstname and last name parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -121,13 +168,25 @@
 									"equals": true
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get all bookings with the firstname  parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -147,13 +206,25 @@
 									"equals": true
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get all bookings with the lastname parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -173,13 +244,25 @@
 									"equals": true
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get all bookings with the checkin parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -199,13 +282,25 @@
 									"equals": true
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get all bookings with the checkout parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -225,8 +320,7 @@
 									"equals": true
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -234,13 +328,30 @@
 		},
 		{
 			"name": "Get a single booking",
-			"description": "",
 			"item": [
 				{
 					"name": "Get a single booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
 						"body": {},
 						"url": {
 							"raw": "{{baseURL}}/booking/1",
@@ -251,14 +362,61 @@
 								"booking",
 								"1"
 							]
-						},
-						"description": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single booking with XML header set",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{baseURL}}/booking/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking",
+								"1"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get a single booking dynamically",
 					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						},
 						{
 							"listen": "prerequest",
 							"script": {
@@ -282,8 +440,7 @@
 								"booking",
 								"{{booking_id}}"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}

@@ -13,7 +13,7 @@ In order to get to the feature and start creating Presets, we need to open it up
 - Select `Manage Presets`, this will display the `Manage Header Presets` dialog box
 - Press the `Add` button to create a new Preset
 
-![Open Pre Set Headers](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Open_Pre_Set_Headers.gif)
+![Open Pre Set Headers](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/04_preSetHeaders/Open_Pre_Set_Headers.gif)
 
 Once the steps above are followed, we can start adding data to our preset.
 
@@ -23,7 +23,7 @@ Once the steps above are followed, we can start adding data to our preset.
 
 Here's an example of what I've added to mine. As you can you see, the Preset values can contain `variables` using the ```{{myVar}}``` syntax, we learnt how these work in a previous lesson.
 
-![New Headers](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/New_Presets.PNG)  
+![New Headers](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/04_preSetHeaders/New_Presets.PNG)  
 
 __Note__ : The `preset` headers don't have the same `Auto-Complete` feature as the main `Headers` section [Open support issue 3862](https://github.com/postmanlabs/postman-app-support/issues/3862). So there is a slight risk of misconfiguring the header, which could cause your request to become invalid. The 2 clips below will explain what I mean.
 
@@ -31,11 +31,11 @@ __Note__ : The `preset` headers don't have the same `Auto-Complete` feature as t
 
 The main Headers section with Auto-Complete:
 
-![Header Auto Complete](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Header_Auto_Complete.gif)
+![Header Auto Complete](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/04_preSetHeaders/Header_Auto_Complete.gif)
 
 The Preset Headers without Auto-Complete:
 
-![Header No Auto Complete](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Header_No_Auto_Complete.gif)
+![Header No Auto Complete](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/04_preSetHeaders/Header_No_Auto_Complete.gif)
 
 ### Using Bulk Insert
 
@@ -54,7 +54,7 @@ myCustomKey:{{myCustomValue}}
 - Select the `Key-Value Edit` option to see how the headers look in that format
 - If you're happy, Press `Add` or `Update`, depending if you're creating or editing a existing Preset
 
-![Bulk Add](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Bulk_Add.gif)
+![Bulk Add](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/04_preSetHeaders/Bulk_Add.gif)
 
 ### Using the Preset Headers
 
@@ -64,7 +64,7 @@ So we have some shiny new Preset Headers created and now we'd like to start usin
 - Select the Headers that you would like to use in the request (We will use the _Restful_Booker_Preset_Headers_ Preset)
 - Once selected you will see the headers populated in the main `Headers` section
 
-![Using Presets](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/Using_Presets.gif)
+![Using Presets](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/04_preSetHeaders/Using_Presets.gif)
 
 That's a quick introduction to the Preset Headers feature, in the next examples we will start using Headers within our requests to the Restful-Booker API.
 
