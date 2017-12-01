@@ -34,7 +34,7 @@ pm.test("Status code is 200", function () {
 });
 ```
 
-This is one the test templates used by Postman, It's a simple JavaScript function that checks that the response status was `200`. Postman has created a pretty powerful set of [`pm.*` global functions](https://www.getpostman.com/docs/postman/scripts/postman_sandbox_api_reference), of which, `test` is one of them. The assertion text on the test is written in a more human readable format, which makes it easier to tell what the test is actually checking. We will be looking at this in more detail in later examples and create tests using more of the [Chai](http://chaijs.com/api/) assertion syntax.
+This is one the test templates used by Postman, It's a simple JavaScript function that checks that the response status was `200`. Postman has created a pretty powerful set of [`pm.* global functions`](https://www.getpostman.com/docs/postman/scripts/postman_sandbox_api_reference), of which, `test` is one of them. The assertion text on the test is written in a more human readable format, which makes it easier to tell what the test is actually checking. We will be looking at this in more detail in later examples and create tests using more of the [Chai](http://chaijs.com/api/) assertion syntax.
 
 __Note__ : I am absolutely **not** a JavaScript developer - The code in my examples will match my current experience. I'm always learning so if there is a cleaner way of writing the code please let me know. I'm open to all feedback :)
 

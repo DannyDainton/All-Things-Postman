@@ -82,9 +82,9 @@ The main piece of `Testing Wisdom` I always keep in my mind is this:
 
 From the API documentation we already know lots of valuable information about this endpoint and a number of variables that we can use to our advantage while exploring the `/booking` endpoint. We've been told that the query parameter types are `Strings` and `Dates` in the `CCYY-MM-DD` format. Using the two sections below, extracted from the cheat sheet, test the endpoint by changing and manipulating the parameters before sending the request to discover new information.  
 
-![THCS Strings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/getAllBookings/THCS_Strings.PNG)
+![THCS Strings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/03_getAllBookings/THCS_Strings.PNG)
 
-![THCS DateTime](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/getAllBookings/THCS_DateTime.PNG)
+![THCS DateTime](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/03_getAllBookings/THCS_DateTime.PNG)
 
 I don't want to list out all the issues that I've discovered while testing. This is a chance for you to interact with the endpoint and have fun while exploring within a safe environment.
 
@@ -92,11 +92,11 @@ I don't want to list out all the issues that I've discovered while testing. This
 
 Using the `lastname` parameter and the example given in the documentation, I sent a request off and the response back was an empty array. I know that the value is a `name` so maybe the first letter is a Capitol e.g. `Brown` - This time a single entry was returned, this is telling me that the search functionality is not case insensitive.
 
-![Case Insensitive](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/getAllBookings/Case_Insensitive.gif)
+![Case Insensitive](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/03_getAllBookings/Case_Insensitive.gif)
 
 Another issue found was around validation of the Date - I decided to break the rules by seeing how it would handle a 13th month in the date value, this resulted in a `500 Internal Server Error`. Oh dear! :(
 
-![Date Rules](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/getAllBookings/Date_Rules.gif)
+![Date Rules](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/03_getAllBookings/Date_Rules.gif)
 
 These are just a couple of basic tests but I'm sure you can have some fun exploring this endpoint and highlighting some more issues :)
 
