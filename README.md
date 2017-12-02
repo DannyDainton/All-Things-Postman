@@ -93,11 +93,17 @@ In this example we will be getting the data for a single booking from the API. W
 
 - [Get a single booking](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/06_getSingleBooking.md)
 
-### 07 Creating our first Test
+### 07 Creating our first test
 
 In this example we will be taking our first look at the `Tests` feature. We will create a basic test to assert against some response data returned from the Restful-Booker API.
 
 - [Creating our first test](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/07_creatingOurFirstTest.md)
+
+### 08 Extending our tests
+
+For this example we will be taking the knowledge gained from creating our first basic test and extending this to cover more of the response data.
+
+- [Extending our tests](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/08_extendingOurTests.md)
 
 ---
 ### More examples to follow shortly...

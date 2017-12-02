@@ -1,7 +1,7 @@
 {
 	"info": {
 		"name": "Restful_Booker_Collection",
-		"_postman_id": "717ba516-a64a-c6a3-9e0d-f3fca385ba45",
+		"_postman_id": "9683276e-d6a9-206d-9a1e-98a7338397f7",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -17,9 +17,9 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 201\", function () {",
-									"    pm.response.to.have.status(201);",
-									"});"
+									"pm.test(\"Status code is 201\", () => pm.response.to.have.status(201))",
+									"",
+									"pm.test('Content-Type header is correct', () => pm.response.to.have.header('Content-Type', 'text/plain; charset=utf-8'))"
 								]
 							}
 						}
@@ -53,9 +53,7 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
 								]
 							}
 						}
@@ -84,9 +82,7 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
 								]
 							}
 						}
@@ -137,9 +133,7 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
 								]
 							}
 						}
@@ -180,9 +174,7 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
 								]
 							}
 						}
@@ -218,9 +210,7 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
 								]
 							}
 						}
@@ -256,9 +246,7 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
 								]
 							}
 						}
@@ -294,9 +282,7 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
 								]
 							}
 						}
@@ -337,9 +323,9 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
+									"",
+									"pm.test('Content-Type header is correct', () => pm.response.to.have.header('Content-Type', 'application/json; charset=utf-8'))"
 								]
 							}
 						}
@@ -374,9 +360,7 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
 								]
 							}
 						}
@@ -411,8 +395,22 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json()",
+									"    pm.expect(jsonData.firstname).to.be.a('string')",
+									"    pm.expect(jsonData.lastname).to.be.a('string')",
+									"    pm.expect(jsonData.totalprice).to.a('number')",
+									"    pm.expect(jsonData.depositpaid).to.be.a('boolean')",
+									"    pm.expect(jsonData.bookingdates.checkin).to.be.a('string')",
+									"    pm.expect(jsonData.bookingdates.checkin).to.match(/^\\d{4}-\\d{2}-\\d{2}$/)",
+									"    pm.expect(jsonData.bookingdates.checkout).to.be.a('string')",
+									"    pm.expect(jsonData.bookingdates.checkout).to.match(/^\\d{4}-\\d{2}-\\d{2}$/)",
+									"});",
+									"",
+									"(pm.response.json().additionalneeds === undefined ? pm.test.skip : pm.test)('Customer has additional needs', () => {",
+									"     pm.expect(pm.response.json().additionalneeds).to.be.a('string')",
 									"});"
 								]
 							}
