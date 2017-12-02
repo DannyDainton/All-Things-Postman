@@ -135,7 +135,7 @@ A second request was made to return data from another `bookingid` and this time 
 ![Additional Needs Property](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/08_extendingOurTests/Additional_Needs_Property.gif)
 
 
-We've come to the end of this example, there was a look of different things happening here. Take your time and work through the content to get familiar with creating different types of tests. As always, if anything doesn't make sense or if you have any questions - Please get in touch!!
+We've come to the end of this example, there were a lot of different things happening here. Take your time and work through the content to get familiar with creating different types of tests. As always, if anything doesn't make sense or if you have any questions - Please get in touch!!
 
 ---
 [Back to the Examples](https://github.com/DannyDainton/All-Things-Postman#example-guides)
