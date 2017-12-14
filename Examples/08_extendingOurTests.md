@@ -114,7 +114,7 @@ pm.expect(jsonData.bookingdates.checkin).to.match(/^\d{4}-\d{2}-\d{2}$/)
 
 In the clip above you can see that the check passed and the response data was how we expected it to be....but was it...You can see that there was an extra property in the response that wasn't on the original response sample above. The `additionalneeds` property is an optional value so some of the bookings will have this and some will not - How are we going to check for this...I'm going to extend the test we created, to include a check for this too.
 
-For this we need to use a JavaScript [Conditional Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator). Normally, I would just use an `if` statement but for the `pm.test` function we need to use this Operator. I will be looking into this more and update the example when I find out the reason why but for now, we'll just use this in the test.
+For this we can to use a JavaScript [Conditional Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
 
 ![Conditional Operator](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/08_extendingOurTests/Conditional_Operator.PNG)
 
@@ -134,6 +134,19 @@ A second request was made to return data from another `bookingid` and this time 
 
 ![Additional Needs Property](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/08_extendingOurTests/Additional_Needs_Property.gif)
 
+We can also use an `if/else` statement to get the same result - The syntax for this looks slightly different but it's basically doing the same thing when we send the request. Practice using different methods to find what works for you.
+
+```javascript
+if (pm.response.json().additionalneeds === undefined){
+    pm.test.skip("Customer has no additional needs", () => {
+        return
+    })
+} else {
+    pm.test("Customer has additional needs", () => {
+        pm.expect(pm.response.json().additionalneeds).to.be.a('string')
+    })
+}
+```
 
 We've come to the end of this example, there were a lot of different things happening here. Take your time and work through the content to get familiar with creating different types of tests. As always, if anything doesn't make sense or if you have any questions - Please get in touch!!
 
