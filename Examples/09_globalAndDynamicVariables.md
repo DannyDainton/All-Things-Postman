@@ -56,7 +56,7 @@ pm.globals.set('another_global_number', 5555)
 
 ![Set Global Variable](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/09_globalAndDynamicVariables/Set_Global_Variable.gif)
 
-As you can see in the clip, when the `Send` button in pressed, the global variable is saved. A shortcut way of seeing the variables that you have set is by using the `Environment quick look` - This can be opened using the `eye` icon in the top right of the application.
+As you can see in the clip, when the `Send` button is pressed, the global variable is saved. A shortcut way of seeing the variables that you have set is by using the `Environment quick look` - This can be opened using the `eye` icon in the top right of the application.
 
 Global variables can be removed on an individual basis by using the `pm.globals.unset('variableName')` function, maybe you need to add some form of _teardown_ process so that you know that your tests are starting in the same state each time they run. Using a single `unset` is fine by you may have several variables that you need to clear, you could add a single line in the test to cover each one but this can get a bit messy. An alternative option is to write a quick function that iterates through a list of variables clearing each one. This might be an option if you want to clear _most_ but not _all_ the variables.      
 
