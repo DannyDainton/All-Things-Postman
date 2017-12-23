@@ -38,7 +38,7 @@ When the test is run, we see the following failure in the Response Test Results 
 
 ![Fifthteen](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/09_globalAndDynamicVariables/Fifthteen.PNG)
 
-On the face of it, it looks fine and 15 does equal 15 but this fails because it's trying the assert that a number matches a string. What we need to do is very simple, we just need to parse our string as number. We can use the [`parseInt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) function and wrap this around the `pm.globals.get('new_global_number')` syntax.
+On the face of it, it looks fine and 15 does equal 15 but this fails because it's trying the assert that a number matches a string. What we need to do is very simple, we just need to parse our string as a number. We can use the [`parseInt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) function and wrap this around the `pm.globals.get('new_global_number')` syntax.
 
 
 ```JavaScript
@@ -58,7 +58,7 @@ pm.globals.set('another_global_number', 5555)
 
 As you can see in the clip, when the `Send` button is pressed, the global variable is saved. A shortcut way of seeing the variables that you have set is by using the `Environment quick look` - This can be opened using the `eye` icon in the top right of the application.
 
-Global variables can be removed on an individual basis by using the `pm.globals.unset('variableName')` function, maybe you need to add some form of _teardown_ process so that you know that your tests are starting in the same state each time they run. Using a single `unset` is fine by you may have several variables that you need to clear, you could add a single line in the test to cover each one but this can get a bit messy. An alternative option is to write a quick function that iterates through a list of variables clearing each one. This might be an option if you want to clear _most_ but not _all_ the variables.      
+Global variables can be removed on an individual basis by using the `pm.globals.unset('variableName')` function, maybe you need to add some form of _teardown_ process so that you know that your tests are starting in the same state each time they run. Using a single `unset` is fine but you may have several variables that you need to clear, you could add a single line in the test to cover each one but this can get a bit messy. An alternative option is to write a quick function that iterates through a list of variables clearing each one. This might be an option if you want to clear _most_ but not _all_ the variables.      
 
 ```JavaScript
 function cleanup() {
