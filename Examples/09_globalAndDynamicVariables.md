@@ -108,7 +108,7 @@ The list of built-in modules can be found on the [Postman Sandbox API reference]
 
 In the following pieces of code I'm going to be using the `console.log()` function - To see this output, you will need to open the `Postman Console` by selecting the icon in the bottom left of the application. Alternatively, you can use the shortcut command `CTRL + ALT + C` to open the console. This will open the console in a new window.
 
-![Postman Console](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public\gifs\09_globalAndDynamicVariables\Postman_Console.gif)
+![Postman Console](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/09_globalAndDynamicVariables/Postman_Console.gif)
 
 In the code below, I'm bringing in the [momentjs](http://momentjs.com/docs/) and [uuid](https://www.npmjs.com/package/uuid) modules using the `require('module_name')` syntax.
 
@@ -128,7 +128,7 @@ console.log(`Random Number: ${randomInt}`)
 
 We are using the `/ping` endpoint to make the request to help show this scenario. The code has been added to the `Pre-Request Script` tab, this sets the values **before** the request is made but this code could also be added to the `Tests` tab. This would set the values **after** the request has been made. An example of this can be seen in the clip below.
 
-![Custom Dynamic Variables](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public\gifs\09_globalAndDynamicVariables\Custom_Dynamic_Variables.gif)
+![Custom Dynamic Variables](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/09_globalAndDynamicVariables/Custom_Dynamic_Variables.gif)
 
 That's the end of this example, we have covered how to create and clear `Global` variables and we have also taken a look at the `Dynamic` variables that Postman offers. In the next example we will be using the `/booking` route to `POST` data to the API and create some new bookings.
 
