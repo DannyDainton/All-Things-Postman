@@ -57,6 +57,8 @@ It will be an ever evolving space so if you would like me to add details coverin
 
 All requests in the examples will be made to the Restful-Booker API - You can find the available endpoints [here](https://restful-booker.herokuapp.com/).
 
+### **Current Postman version being used:** _5.5.0 Windows x64_
+
 ### 01 `GET` /ping
 
 In this example we will send a request using the `/ping` route to ensure that the API is active and able to receive requests.
@@ -105,5 +107,10 @@ For this example we will be taking the knowledge gained from creating our first 
 
 - [Extending our tests](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/08_extendingOurTests.md)
 
+### 09 Global and Dynamic variables
+
+In this example we'll be looking at how to Create, Use and Clear Global variables. We will also be taking a look at the Dynamic Variables that Postman offers.
+
+- [Global Variables](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/09_globalAndDynamicVariables.md)
 ---
 ### More examples to follow shortly...
