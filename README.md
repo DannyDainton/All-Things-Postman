@@ -111,6 +111,6 @@ For this example we will be taking the knowledge gained from creating our first 
 
 In this example we'll be looking at how to Create, Use and Clear Global variables. We will also be taking a look at the Dynamic Variables that Postman offers.
 
-- [Global Variables](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/09_globalAndDynamicVariables.md)
+- [Global and Dynamic variables](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/09_globalAndDynamicVariables.md)
 ---
 ### More examples to follow shortly...
