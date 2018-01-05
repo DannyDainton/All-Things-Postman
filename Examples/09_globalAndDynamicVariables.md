@@ -80,8 +80,8 @@ Postman is full of different "helper" functions and the dynamic variables are ab
 
 The variables in the list below can be added to Postman and these values will be populated at runtime (When you hit `Send`).
 
-* `{{$timestamp}}` : Adds a v4 style GUID
-* `{{$guid}}`      : Adds the current timestamp (Unix timestamp)
+* `{{$timestamp}}` : Adds the current timestamp (Unix timestamp)
+* `{{$guid}}`      : Adds a v4 style GUID
 * `{{$randomInt}}` : Adds a random integer between 0 and 1000
 
 These can be added to the request in the same way that we added the `environment` variables, in a previous example. For the dynamic variables, Postman uses the `auto-complete` feature to display the options available when using the `{{...}}` syntax. The clip below shows how these can be added to the URL:
