@@ -30,6 +30,24 @@ Request data:
 
 ```json
 {
+  "firstname" : "Sally",
+	"lastname" : "Brown",
+	"totalprice" : 111,
+	"depositpaid" : true,
+	"additionalneeds" : "Breakfast",
+	"bookingdates" : {
+		"checkin" : "2013-02-23",
+		"checkout" : "2014-10-23"
+	}
+}
+```
+
+![Create Booking](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/10_createNewBookings/Create_Booking.gif)
+
+Response data:
+
+```json
+{
     "bookingid": 11,
     "booking": {
         "firstname": "Sally",
@@ -44,8 +62,6 @@ Request data:
     }
 }
 ```
-
-![Create Booking](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/10_createNewBookings/Create_Booking.gif)
 
 We can see a number of things just from the response - A `bookingid` has been returned, we know that we can get details of a single booking from the `/booking/{id}` endpoint so that's something to explore further. The format returned in the `booking` object is slightly different from the format we used in the request, is that a problem? Should this be consistent? We can also see that the `status code` returned is a `200 OK` - Should this be changed to return a `201 Created`?
 
