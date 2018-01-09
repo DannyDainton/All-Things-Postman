@@ -8,7 +8,7 @@ This is the first time we will be using the `POST` method. Up to now, the exampl
 
 ![Post Body](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/10_createNewBookings/Post_Body.PNG)
 
-From the Restful-Booker documentation, we can see that a new booking can be created using either a `JSON` or `XML` payload. We also need to add the correct `Content-Type` header to the request depending on the payload format we are sending.
+From the [Restful-Booker documentation](https://restful-booker.herokuapp.com/#post-booking), we can see that a new booking can be created using either a `JSON` or `XML` payload. We also need to add the correct `Content-Type` header to the request depending on the payload format we are sending.
 
 ### Create a new bookings
 
@@ -26,7 +26,7 @@ By setting this as `JSON` it will then change the `raw` input field, to validate
 
 Using the sample data set from the documentation, we can see the structure and format of data that is used to create a new booking. First off, let's see what happens when we send through the request without making any changes to the data - We are looking to see what the response looks like:
 
-![Create Booking](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/10_createNewBookings/Create_Booking.gif)
+Request data:
 
 ```json
 {
@@ -44,6 +44,8 @@ Using the sample data set from the documentation, we can see the structure and f
     }
 }
 ```
+
+![Create Booking](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/10_createNewBookings/Create_Booking.gif)
 
 We can see a number of things just from the response - A `bookingid` has been returned, we know that we can get details of a single booking from the `/booking/{id}` endpoint so that's something to explore further. The format returned in the `booking` object is slightly different from the format we used in the request, is that a problem? Should this be consistent? We can also see that the `status code` returned is a `200 OK` - Should this be changed to return a `201 Created`?
 
