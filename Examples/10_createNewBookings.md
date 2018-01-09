@@ -65,7 +65,15 @@ Response data:
 
 We can see a number of things just from the response - A `bookingid` has been returned, we know that we can get details of a single booking from the `/booking/{id}` endpoint so that's something to explore further. The format returned in the `booking` object is slightly different from the format we used in the request, is that a problem? Should this be consistent? We can also see that the `status code` returned is a `200 OK` - Should this be changed to return a `201 Created`?
 
-From such a basic request we are starting to create a list a different questions and we haven't really _tested_ the endpoint yet. When I'm looking at the sample data, I'm looking for the variables that can be changed and creating a list of _What if's_ in my mind. What if I change the numbers for strings? What if the checkout date is before the check in date? What if I leave some of the data out completely? Is there a limit of digits we can use on the `totalprice` property? I'm thinking about how this data is being stored, what would prevent this from being saved correctly? To name a few but I have loads more going through my mind - What are the _What if's_ that you would think about - Try them out and explore this endpoint.
+From such a basic request we are starting to create a list a different questions and we haven't really _tested_ the endpoint yet. When I'm looking at the sample data, I'm looking for the variables that can be changed and creating a list of _What if's_ in my mind.
+
+- What if I change the numbers for strings?
+- What if the checkout date is before the check in date?
+- What if I leave some of the data out completely?
+- Is there a limit of digits we can use on the `totalprice` property?
+- I'm thinking about how this data is being stored, what would prevent this from being saved correctly?
+
+To name a few but I have loads more going through my mind - What are the _What if's_ that you would think about - Try them out and explore this endpoint.
 
 I'm going to just explore a couple of those _What if's_ - Firstly, What happens if you remove an item from the data sent in the request? I think the `firstname` is an important one, there is nothing telling me that this is required...so let's remove it and see what happens...
 
