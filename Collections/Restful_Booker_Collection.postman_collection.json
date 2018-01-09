@@ -15,11 +15,24 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "d4523c60-a2fc-416a-a1d5-f6516721f2c7",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 201\", () => pm.response.to.have.status(201))",
 									"",
 									"pm.test('Content-Type header is correct', () => pm.response.to.have.header('Content-Type', 'text/plain; charset=utf-8'))"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "945042dc-1d26-4f1d-8505-61d928416bac",
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									""
 								]
 							}
 						}
@@ -51,6 +64,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "1d436a72-c0cc-4fee-9f43-bd017d0d373f",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
@@ -172,9 +186,11 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "e9268b31-7153-4d71-afec-55bdd4da3716",
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
+									""
 								]
 							}
 						}
@@ -292,7 +308,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{baseURL}}/booking?checkout=2017-13-11",
+							"raw": "{{baseURL}}/booking?checkout=2017-11-11",
 							"host": [
 								"{{baseURL}}"
 							],
@@ -302,7 +318,7 @@
 							"query": [
 								{
 									"key": "checkout",
-									"value": "2017-13-11",
+									"value": "2017-11-11",
 									"equals": true
 								}
 							]
@@ -391,36 +407,26 @@
 					"name": "Get a single booking dynamically",
 					"event": [
 						{
-							"listen": "test",
+							"listen": "prerequest",
 							"script": {
+								"id": "e8cda791-42de-4b88-8b15-669fea4204a1",
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
-									"",
-									"pm.test(\"Response data format is correct\", () => {",
-									"    var jsonData = pm.response.json()",
-									"    pm.expect(jsonData.firstname).to.be.a('string')",
-									"    pm.expect(jsonData.lastname).to.be.a('string')",
-									"    pm.expect(jsonData.totalprice).to.a('number')",
-									"    pm.expect(jsonData.depositpaid).to.be.a('boolean')",
-									"    pm.expect(jsonData.bookingdates.checkin).to.be.a('string')",
-									"    pm.expect(jsonData.bookingdates.checkin).to.match(/^\\d{4}-\\d{2}-\\d{2}$/)",
-									"    pm.expect(jsonData.bookingdates.checkout).to.be.a('string')",
-									"    pm.expect(jsonData.bookingdates.checkout).to.match(/^\\d{4}-\\d{2}-\\d{2}$/)",
-									"});",
-									"",
-									"(pm.response.json().additionalneeds === undefined ? pm.test.skip : pm.test)('Customer has additional needs', () => {",
-									"     pm.expect(pm.response.json().additionalneeds).to.be.a('string')",
-									"});"
+									"pm.environment.set(\"booking_id\", Math.floor((Math.random() * 10) + 1))"
 								]
 							}
 						},
 						{
-							"listen": "prerequest",
+							"listen": "test",
 							"script": {
+								"id": "7f1529fa-a58b-4d9b-a8b1-651483fa26e8",
 								"type": "text/javascript",
 								"exec": [
-									"pm.environment.set(\"booking_id\", Math.floor((Math.random() * 10) + 1))"
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
+									"    ",
+									"",
+									"",
+									""
 								]
 							}
 						}
@@ -442,7 +448,186 @@
 					},
 					"response": []
 				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bed71d80-d8ce-4cdb-8a88-29bf0e78c8d4",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "44406529-93e1-4cb2-9f9f-68d1caa5cc9e",
+						"type": "text/javascript",
+						"exec": [
+							"if(pm.response.to.have.header('Content-Type') === 'application/json; charset=utf-8') {",
+							"    pm.test(\"Response data format is correct\", () => {",
+							"    var jsonData = pm.response.json()",
+							"    pm.expect(jsonData.firstname).to.be.a('string')",
+							"    pm.expect(jsonData.lastname).to.be.a('string')",
+							"    pm.expect(jsonData.totalprice).to.a('number')",
+							"    pm.expect(jsonData.depositpaid).to.be.a('boolean')",
+							"    pm.expect(jsonData.bookingdates.checkin).to.be.a('string')",
+							"    pm.expect(jsonData.bookingdates.checkin).to.match(/^\\d{4}-\\d{2}-\\d{2}$/)",
+							"    pm.expect(jsonData.bookingdates.checkout).to.be.a('string')",
+							"    pm.expect(jsonData.bookingdates.checkout).to.match(/^\\d{4}-\\d{2}-\\d{2}$/)",
+							"});",
+							"",
+							"(pm.response.json().additionalneeds === undefined ? pm.test.skip : pm.test)('Customer has additional needs', () => {",
+							"        pm.expect(pm.response.json().additionalneeds).to.be.a('string')",
+							"});",
+							"}",
+							"",
+							""
+						]
+					}
+				}
 			]
+		},
+		{
+			"name": "Create a new booking",
+			"description": "",
+			"item": [
+				{
+					"name": "Create a new booking with JSON",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "eeb0b51e-2c47-4271-8399-7fd1cd934d72",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "748f8788-42bc-4765-a013-0795b357b67b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstname\" : \"Sally\",\r\n\t\"lastname\" : \"Brown\",\r\n\t\"totalprice\" : 111,\r\n\t\"depositpaid\" : true,\r\n\t\"additionalneeds\" : \"Breakfast\",\r\n\t\"bookingdates\" : {\r\n\t\t\"checkin\" : \"2013-02-23\",\r\n\t\t\"checkout\" : \"2014-10-23\"\r\n\t}\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new booking with XML",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "eeb0b51e-2c47-4271-8399-7fd1cd934d72",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "43617033-fef8-4fae-9cef-6ddbcf0260d6",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<booking>\r\n    <firstname>Sally</firstname>\r\n    <lastname>Brown</lastname>\r\n    <totalprice>111</totalprice>\r\n    <depositpaid>true</depositpaid>\r\n    <additionalneeds>Breakfast</additionalneeds>\r\n    <bookingdates>\r\n        <checkin>2013/02/23</checkin>\r\n        <checkout>2014/10/23</checkout>\r\n    </bookingdates>\r\n</booking>"
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "dc3d0ab5-1b11-4abe-b203-7240dc6b3fd7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "3dfdde3a-f257-4fde-8b54-9301f0e4f6c8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "53947ee9-ac1b-4a5f-8cf3-b712e97ab07a",
+			"key": "dd",
+			"value": "1234",
+			"type": "text"
 		}
 	]
 }

@@ -112,5 +112,12 @@ For this example we will be taking the knowledge gained from creating our first 
 In this example we'll be looking at how to Create, Use and Clear Global variables. We will also be taking a look at the Dynamic Variables that Postman offers.
 
 - [Global and Dynamic variables](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/09_globalAndDynamicVariables.md)
+
+### 10 `POST` /booking
+
+In this example we'll be using the `POST` method to send data to the `/booking` endpoint and create some new bookings based on the information we provide in the request.
+
+- [Create new bookings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/10_createNewBookings.md)
+
 ---
 ### More examples to follow shortly...

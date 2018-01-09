@@ -1,4 +1,4 @@
-# 08 Extending our tests
+# Extending our tests
 
 For this example we will be taking the knowledge gained from creating our first basic test and extending this to cover more of the response data.
 

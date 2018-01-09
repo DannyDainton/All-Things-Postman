@@ -1,4 +1,4 @@
-# 07 Creating our first test
+# Creating our first test
 
 In this example we will be taking our first look at the `Tests` feature. We will create a basic test to assert against some response data returned from the Restful-Booker API.
 
