@@ -57,7 +57,11 @@ This causes a `500 Internal Server Error` which is obviously not a good thing - 
 
 In the second scenario, I want to explore the `totalprice` property to see what information I can get from this value. I start to increase the number of digits in increments of 2, for no other reason than to control the test data. This starts to get _interesting_ when I get to 15 digits, on the 16 digit the value changes to something I wasn't expecting to see.
 
+With 15 digits:
+
 ![Fifthteen Digits](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/10_createNewBookings/Fifthteen_Digits.PNG)
+
+With 16 digits:
 
 ![Sixteen Digits](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/10_createNewBookings/Sixteen_Digits.PNG)
 
