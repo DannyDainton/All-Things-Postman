@@ -596,6 +596,158 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Dynamically create a new booking with JSON",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f4db6ba1-d350-4d89-a62b-97543a0886df",
+								"type": "text/javascript",
+								"exec": [
+									"pm.sendRequest(\"https://randomuser.me/api/\", (err, res) => {",
+									"    var firstname = res.json().results[0].name.first",
+									"    var lastname  = res.json().results[0].name.last",
+									"    pm.environment.set(\"first_name\", JSON.stringify((_.capitalize(firstname))))",
+									"    pm.environment.set(\"last_name\", JSON.stringify((_.capitalize(lastname))))",
+									"})",
+									"",
+									"pm.environment.set(\"total_price\", _.random(0, 1000))",
+									"",
+									"const depositPaid = [true, false]",
+									"pm.environment.set(\"depositPaid\", _.shuffle(depositPaid)[0])",
+									"",
+									"const moment = require('moment')",
+									"pm.environment.set(\"check_in\", JSON.stringify(moment().format('YYYY-MM-DD')))",
+									"pm.environment.set(\"check_out\", JSON.stringify(moment().add(_.random(1, 14), 'days').format('YYYY-MM-DD')))",
+									"",
+									"const items = [\"None\", \"Breakfast\", \"Lunch\", \"Dinner\", \"Late Checkout\", \"Newspaper\", \"Extra Pillow\"]",
+									"pm.environment.set(\"additional_needs\", JSON.stringify(_.shuffle(items)[0]))"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "34a00c54-ce1d-4a19-9ff4-59ffc06f5e39",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
+									"",
+									"function cleanup() {",
+									"    const clean = ['first_name', 'last_name', 'total_price', 'depositPaid', 'check_in', 'check_out', 'additional_needs']",
+									"    for(let i = 0; i < clean.length; ++i){",
+									"        pm.environment.unset(clean[i])",
+									"    }",
+									"}",
+									"cleanup()",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"firstname\" : {{first_name}},\r\n\t\"lastname\" : {{last_name}},\r\n\t\"totalprice\" : {{total_price}},\r\n\t\"depositpaid\" : {{depositPaid}},\r\n\t\"additionalneeds\" : {{additional_needs}},\r\n\t\"bookingdates\" : {\r\n\t\t\"checkin\" : {{check_in}},\r\n\t\t\"checkout\" : {{check_out}}\r\n\t}\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dynamically create a new booking with XML",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f4db6ba1-d350-4d89-a62b-97543a0886df",
+								"type": "text/javascript",
+								"exec": [
+									"pm.sendRequest(\"https://randomuser.me/api/\", (err, res) => {",
+									"    var firstname = res.json().results[0].name.first",
+									"    var lastname  = res.json().results[0].name.last",
+									"    pm.environment.set(\"first_name\", JSON.stringify((_.capitalize(firstname))))",
+									"    pm.environment.set(\"last_name\", JSON.stringify((_.capitalize(lastname))))",
+									"})",
+									"",
+									"pm.environment.set(\"total_price\", _.random(0, 1000))",
+									"",
+									"const depositPaid = [true, false]",
+									"pm.environment.set(\"depositPaid\", _.shuffle(depositPaid)[0])",
+									"",
+									"const moment = require('moment')",
+									"pm.environment.set(\"check_in\", JSON.stringify(moment().format('YYYY-MM-DD')))",
+									"pm.environment.set(\"check_out\", JSON.stringify(moment().add(_.random(1, 14), 'days').format('YYYY-MM-DD')))",
+									"",
+									"const items = [\"None\", \"Breakfast\", \"Lunch\", \"Dinner\", \"Late Checkout\", \"Newspaper\", \"Extra Pillow\"]",
+									"pm.environment.set(\"additional_needs\", JSON.stringify(_.shuffle(items)[0]))"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "34a00c54-ce1d-4a19-9ff4-59ffc06f5e39",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
+									"",
+									"function cleanup() {",
+									"    const clean = ['first_name', 'last_name', 'total_price', 'depositPaid', 'check_in', 'check_out', 'additional_needs']",
+									"    for(let i = 0; i < clean.length; ++i){",
+									"        pm.environment.unset(clean[i])",
+									"    }",
+									"}",
+									"cleanup()",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<booking>\r\n    <firstname>{{first_name}}</firstname>\r\n    <lastname>{{last_name}}</lastname>\r\n    <totalprice>{{total_price}}</totalprice>\r\n    <depositpaid>{{depositPaid}}</depositpaid>\r\n    <additionalneeds>{{additional_needs}}</additionalneeds>\r\n    <bookingdates>\r\n        <checkin>{{check_in}}</checkin>\r\n        <checkout>{{check_out}}</checkout>\r\n    </bookingdates>\r\n</booking>"
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
@@ -620,14 +772,6 @@
 					""
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"id": "53947ee9-ac1b-4a5f-8cf3-b712e97ab07a",
-			"key": "dd",
-			"value": "1234",
-			"type": "text"
 		}
 	]
 }

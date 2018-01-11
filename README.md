@@ -119,5 +119,11 @@ In this example we'll be using the `POST` method to send data to the `/booking` 
 
 - [Create new bookings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/10_createNewBookings.md)
 
+### 11 Dynamically create new bookings
+
+For this example we will be using Postman to dynamically generate data using some of the built-in modules to create new bookings.
+
+- [Dynamically create new bookings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/11_dynamicallyCreateNewBookings.md)
+
 ---
 ### More examples to follow shortly...
