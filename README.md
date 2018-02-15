@@ -127,3 +127,7 @@ For this example we will be using Postman to dynamically generate data using som
 
 ---
 ### More examples to follow shortly...
+
+**Update - 15th Feb 2018**
+
+I'm currently getting things ready for my first conference talk in March so I've put this repo on hold for the next 30 days or so - I will be back very soon and I will be updating the Examples with lots of useful things like Collection and sub folder level elements, Using the Collection Runner with and without data files, intro to basic Auth and many more interesting things...If there is something that you would like to see, please drop me a line! Cheers!  
