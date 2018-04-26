@@ -57,7 +57,7 @@ It will be an ever evolving space so if you would like me to add details coverin
 
 All requests in the examples will be made to the Restful-Booker API - You can find the available endpoints [here](https://restful-booker.herokuapp.com/).
 
-### **Current Postman version being used:** _5.5.0 Windows x64_
+### **Current Postman version being used:** _6.0.10 Windows x64_
 
 ### 01 `GET` /ping
 
@@ -125,9 +125,11 @@ For this example we will be using Postman to dynamically generate data using som
 
 - [Dynamically create new bookings](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/11_dynamicallyCreateNewBookings.md)
 
+### 12 Introduction to the Collection Runner
+
+In this example we will be looking a bit closer at the `Collection Runner` which allows us to run a series of requests.
+
+- [Introduction to the Collection Runner](https://github.com/DannyDainton/All-Things-Postman/blob/master/Examples/12_introductionToTheCollectionRunner.md)
+
 ---
 ### More examples to follow shortly...
-
-**Update - 15th Feb 2018**
-
-I'm currently getting things ready for my first conference talk in March so I've put this repo on hold for the next 30 days or so - I will be back very soon and I will be updating the Examples with lots of useful things like Collection and sub folder level elements, Using the Collection Runner with and without data files, intro to basic Auth and many more interesting things...If there is something that you would like to see, please drop me a line! Cheers!  
