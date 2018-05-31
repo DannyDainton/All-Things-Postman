@@ -45,6 +45,7 @@ All the requests that we will be making, will be included in a collection, that 
 - In-Built Test Runner
 - Newman command line collection runner
 - Postman Console
+- Using some built in modules like `moment` and `Lodash`
 - Many many more...
 
 The format will take the form of a series of individual pages where I will explain in a bit more detail what I'm actually doing in Postman when making the requests and this will be backed up by images, gifs, code snippets etc. to try and make the information come to life. I'm a Tester so you can expect me to make observations along the way and I will be noting these down but the main focus of the examples we always be, using Postman and it's features to request data from the Restful-Booker API.
@@ -57,7 +58,7 @@ It will be an ever evolving space so if you would like me to add details coverin
 
 All requests in the examples will be made to the Restful-Booker API - You can find the available endpoints [here](https://restful-booker.herokuapp.com/).
 
-### **Current Postman version being used:** _6.0.10 Windows x64_
+### **Current Postman version being used:** _6.1.3 Windows x64_
 
 ### 01 `GET` /ping
 
@@ -133,3 +134,16 @@ In this example we will be looking a bit closer at the `Collection Runner` which
 
 ---
 ### More examples to follow shortly...
+
+I'm currently in the process of updating the images and gifs, this was always going to be the case when creating static content for a living software project like Postman - During the latest updates the UI has changed slightly so the examples will be correct but the visuals might be slightly outdated. As I have added many of these to each example, recreating them is going to be a mission in itself, please bare with me. :)
+
+Upcoming examples will include:
+- Data driven requests from the `Collection Runner`
+- Request Workflows
+- Collection and Sub-Folder level elements
+- Basic Authentication
+- Mocks
+- Creating documentation for your API
+- And a few more...
+
+As always, I'm available to chat over on Twitter `@dannydainton` and I've recently started answering questions on Stackoverflow, so if you do have a specific problem, just jump over to there and I'll try my best to help :) 
