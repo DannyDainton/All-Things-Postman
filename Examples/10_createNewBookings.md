@@ -101,7 +101,7 @@ How about providing a string value and not a number - How is this handled...
 
 Those are basic tests that just sparked my curiosity and can be run quickly to uncover information about the API and how it handles different requests. Use the Restful-Booker API to run your own tests and see what you can discover.
 
-That's the end of this example, we have learnt how to use Postman to make a `POST` request to the API and create new a new booking based on the information provided. In the nest example we will be looking at how to remove the manual data entry aspect away and use Postman to create this data for us.
+That's the end of this example, we have learnt how to use Postman to make a `POST` request to the API and create new a new booking based on the information provided. In the next example we will be looking at how to remove the manual data entry aspect away and use Postman to create this data for us.
 
 ---
 [Back to the Examples](https://github.com/DannyDainton/All-Things-Postman#example-guides)
