@@ -55,9 +55,7 @@ Enter the base URL of the Restful-Booker API `https://restful-booker.herokuapp.c
 
 From a very simple request we can gather lots of useful information about response times, response data size and tons of details in the Headers (which we will cover in later examples). We're going to just take a look at the `response code`, this can be found in the red box on the image above.
 
-##### That's interesting...
-
-According to the documentation provided, we should be seeing a `200 OK` response back from our request. Have we found our very first issue? Is the API correct in returning a `201 Created` or is the documentation out of date? For me, that's an invitation to start a conversation with the developer to confirm what the expected or desired behaviour is for this route.
+According to the documentation provided, we should be seeing a `201 Created` response back from our request.
 
 That's the very first example complete - I've purposely started very basic and the pace might not suit people that already have a good understanding of the tool already but this will become more advanced very soon so please stick with it. :)
 

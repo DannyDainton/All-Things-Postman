@@ -34,11 +34,11 @@ The tool on it's own is quite useless, in order for us to start having some fun 
 
 > "Restful-booker is a Create Read Update Delete (CRUD) Web API that comes with authentication features and loaded with a bunch of bugs for you to explore"
 
-I would recommend taking a look through the API [documentation](https://restful-booker.herokuapp.com/) to get a feel for the type of requests we will be making within the example guides. We'll get very familiar using the GET, POST, PUT and DELETE verbs and pairing these with the powerful features of Postman.
+I would recommend taking a look through the API [documentation](https://restful-booker.herokuapp.com/apidoc/index.html) to get a feel for the type of requests we will be making within the example guides. We'll get very familiar using the GET, POST, PUT and DELETE verbs and pairing these with the powerful features of Postman.
 
-All the requests that we will be making, will be included in a collection, that can be imported directly into your local Postman application. It will start quite basic but we will be building these collections and incorporating features such as:
+All the requests that we will be making, will be included in a `collection` file, that can be imported directly into your local Postman application. It will start quite basic but we will be building these collections and incorporating features such as:
 
-- Environment and Global Variables
+- Collection, Environment and Global Variables
 - Preset Headers (Saving you a bunch of time)
 - Pre-Request Scripts (Writing basic JavaScript to create new data with each request and other cool things)
 - Tests ([Chai](http://chaijs.com/api/) style assertions)
@@ -56,9 +56,9 @@ It will be an ever evolving space so if you would like me to add details coverin
 
 ## Example Guides
 
-All requests in the examples will be made to the Restful-Booker API - You can find the available endpoints [here](https://restful-booker.herokuapp.com/).
+All requests in the examples will be made to the Restful-Booker API - You can find the available endpoints [here](https://restful-booker.herokuapp.com/apidoc/index.html).
 
-### **Current Postman version being used:** _6.1.3 Windows x64_
+### **Current Postman version being used:** _6.2.5 Windows x64_
 
 ### 01 `GET` /ping
 
@@ -146,4 +146,4 @@ Upcoming examples will include:
 - Creating documentation for your API
 - And a few more...
 
-As always, I'm available to chat over on Twitter `@dannydainton` and I've recently started answering questions on Stackoverflow, so if you do have a specific problem, just jump over to there and I'll try my best to help :) 
+As always, I'm available to chat over on Twitter `@dannydainton` and I've recently started answering questions on Stackoverflow under the `postman` tag, so if you do have a specific problem, just jump over to there and I'll try my best to help :)

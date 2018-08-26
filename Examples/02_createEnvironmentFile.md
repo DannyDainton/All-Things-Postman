@@ -29,13 +29,12 @@ In the clip, you can see that the only thing that is changing is the environment
 A new environment file can be created in a number of different ways. One way is by following the steps below. In the file, we will be setting the `baseURL` value to `https://restful-booker.herokuapp.com` and using this in all of our requests as we move through the examples.
 
 - Press the `cog` icon in the top right on the application, just above the `Save` button
-- Select the `Manage Environments` option
 - Press the `Add` button
 - Give your environment file a name (I've called mine _Restful\_Booker\_Environment_ )
-- In the `New key` field, type `baseURL`
-- In the `Value` field next `baseURL`, type `https://restful-booker.herokuapp.com`
+- In the `Add a new variable` field, type `baseURL`
+- In the field next `baseURL`, type `https://restful-booker.herokuapp.com`
 - When you're done, Press the `Add` button
-- To get back to the main window, either press the `X` button or click anywhere not in the `Manage Environments` dialog box
+- To get back to the main window, press the `X` button
 
 This process can be seen in the clip below:
 
@@ -53,7 +52,7 @@ The clip below shows this process, I've used fake data this time as we have alre
 
 ### Referencing data from the file
 
-In order to use the data within the file that we just created, we need to reference this in the request. Postman uses a double curly brace at either end of the `key` to make the link to the `value`. This syntax looks like this ```{{myKey}}``` and this syntax can replace the `https://restful-booker.herokuapp.com` value that we already have in our request.
+In order to use the data within the file that we just created, we need to reference this in the request. Postman uses a double curly brace at either end of the `key` to make the link to the `value`. The syntax looks like this ```{{myKey}}``` and this syntax can replace the `https://restful-booker.herokuapp.com` value that we already have in our request.
 
 ![Set an environment value](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/02_createEnvironmentFile/Set_An_Environment.gif)
 
