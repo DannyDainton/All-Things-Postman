@@ -23,19 +23,11 @@ Once the steps above are followed, we can start adding data to our preset.
 
 Here's an example of what I've added to mine. As you can you see, the Preset values can contain `variables` using the ```{{myVar}}``` syntax, we learnt how these work in a previous lesson.
 
-![New Headers](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/04_preSetHeaders/New_Presets.PNG)  
+![New Presets](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/04_preSetHeaders/New_Presets.PNG)  
 
-__Note__ : The `preset` headers don't have the same `Auto-Complete` feature as the main `Headers` section [Open support issue 3862](https://github.com/postmanlabs/postman-app-support/issues/3862). So there is a slight risk of misconfiguring the header, which could cause your request to become invalid. The 2 clips below will explain what I mean.
-
-
-
-The main Headers section with Auto-Complete:
+There's a handy auto-complete feature within the `Headers` section, this will present you with a pre-defined list containing _most_ of the commonly used request headers. The clip below shows this feature in action...very cool! This feature is also available when creating your pre-sets headers. 
 
 ![Header Auto Complete](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/04_preSetHeaders/Header_Auto_Complete.gif)
-
-The Preset Headers without Auto-Complete:
-
-![Header No Auto Complete](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/04_preSetHeaders/Header_No_Auto_Complete.gif)
 
 ### Using Bulk Insert
 
