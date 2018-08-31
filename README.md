@@ -135,8 +135,6 @@ In this example we will be looking a bit closer at the `Collection Runner` which
 ---
 ### More examples to follow shortly...
 
-I'm currently in the process of updating the images and gifs, this was always going to be the case when creating static content for a living software project like Postman - During the latest updates the UI has changed slightly so the examples will be correct but the visuals might be slightly outdated. As I have added many of these to each example, recreating them is going to be a mission in itself, please bare with me. :)
-
 Upcoming examples will include:
 - Data driven requests from the `Collection Runner`
 - Request Workflows
