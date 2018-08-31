@@ -8,7 +8,7 @@ This is the first time we will be using the `POST` method. Up to now, the exampl
 
 ![Post Body](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/10_createNewBookings/Post_Body.PNG)
 
-From the [Restful-Booker documentation](https://restful-booker.herokuapp.com/#post-booking), we can see that a new booking can be created using either a `JSON` or `XML` payload. We also need to add the correct `Content-Type` header to the request depending on the payload format we are sending.
+From the [Restful-Booker documentation](https://restful-booker.herokuapp.com/apidoc/index.html#api-Booking-CreateBooking), we can see that a new booking can be created using either a `JSON` or `XML` payload. We also need to add the correct `Content-Type` header to the request depending on the payload format we are sending.
 
 ### Create a new bookings
 
@@ -48,7 +48,7 @@ Response data:
 
 ```json
 {
-    "bookingid": 11,
+    "bookingid": 12,
     "booking": {
         "firstname": "Sally",
         "lastname": "Brown",
