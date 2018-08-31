@@ -1,32 +1,33 @@
 # Global and Dynamic variables
 
-In this example we'll be looking at how to Create, Use and Clear Global variables. We will also be taking a look at the Dynamic Variables that Postman offers.
+In this example we'll be looking at how to `Create`, `Use` and `Clear` global variables. We will also be taking a look at the Dynamic Variables that Postman offers.
 
 ---
 
 Previously, I wrote an example all about the `Manage Environment` feature - This gave us a method of storing different pieces of data as `variables` within a single environment. These can then be used in multiple areas on a request, all under the same environment umbrella.
 
-That's perfect if you have specific environments but maybe you have the need to set a variable that can be used anywhere, regardless of environment, that's where `Globals` come into to play. This gives you the ability to set a value globally and reference this data everywhere.  
+That's perfect if you have specific environments but maybe you have the need to set a variable that can be used anywhere, regardless of environment, that's where `globals` come into to play. This gives you the ability to set a value globally and reference this data everywhere.  
 
 Let's take a closer look at how these work and how we can `set`, `get`, `unset` and `clear` them in the application.
 
-Like the `environment` variables, the `Global` variables can be set using the UI, we can do this by following these steps:
+Like the `environment` variables, the `global` variables can be set using the UI, we can do this by following these steps:
 
 - Press the `cog` icon in the top right on the application, just above the `Save` button
-- Select the `Manage Environments` option
 - Press the `Globals` button
-- In the `Key` field, give the variable a name (e.g. _`new_global_number`_)
-- In the `Value` field, type `15` as the value
+- In the `Add a new variable` field, give the variable a name (e.g. _`new_global_number`_)
+- In the `Inital Value` field, type `15` as the value, this will also populate the `Current Value` field
 - Press the `Save` button
-- To get back to the main window, either press the `X` button or click anywhere not in the `Manage Environments` dialog box
+- To get back to the main window, press the `X` button
 
 ![Global Variables](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/09_globalAndDynamicVariables/Global_Variables.PNG)
 
-We now have our first globally available variable set and it's ready to use, I've chosen a _number_ for a reason, it's to demonstrate something that can be a little bit confusing at first. This applies to both the `environment` and `Global` variables but as we're looking at the globals at the moment, I'll show you here.
+We now have our first globally available variable set and it's ready to use, I've chosen a _number_ for a reason, it's to demonstrate something that can be a little bit confusing at first. This applies to both the `environment` and `global` variables but as we're looking at the globals at the moment, I'll show you here.
 
 Everything you store as a variable is saved in the JSON environment file as a `string` so although we added the `number` 15, what we really added was the `string` "15". I'm going to show you a quick test so that you can see why this _could_ be confusing at first, once you know what's happening you will be able to amend your tests to look for the correct value.
 
-To access the value of any Global variable in a request we use the `pm.globals.get('variableName')` syntax. As you start to type the variable name, an auto-complete box will be displayed with a list of options. You can use the `up` and `down` navigation arrows to move through the list and hit `Enter` on the one that you require.
+The global variable can be used in the URL, Headers and the Request Body using the `{{..}}` syntax, just like the way we can use the environment level variables.
+
+We are now going to use a different method to access the global variables value by using the `pm.globals.get('variableName')` syntax. As you start to type the variable name, an auto-complete box will be displayed with a list of options. You can use the `up` and `down` navigation arrows to move through the list and hit `Enter` on the one that you require.
 
 This basic check is to confirm that the number 15 is equal to the value that we previously set in our variable. Looks quite straight forward...
 
@@ -110,7 +111,7 @@ In the following pieces of code I'm going to be using the `console.log()` functi
 
 ![Postman Console](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/09_globalAndDynamicVariables/Postman_Console.gif)
 
-In the code below, I'm bringing in the [momentjs](http://momentjs.com/docs/) and [uuid](https://www.npmjs.com/package/uuid) modules using the `require('module_name')` syntax.
+In the code below, I'm bringing in the [momentjs](http://momentjs.com/docs/), [uuid](https://www.npmjs.com/package/uuid) and the [Lodash](https://lodash.com/docs/3.10.1) modules using the `require('module_name')` syntax. The `require` statement is not needed to use the `3.10.1` version of Lodash but you would need to use the `require` statement for the newer version.
 
 ```JavaScript
 // {{$timestamp}} alternative
@@ -122,7 +123,7 @@ const uuid = require('uuid')
 console.log(`Guid: ${uuid()}`)
 
 // {{$randomInt}} alternative
-const randomInt = Math.floor((Math.random() * 1000))
+const randomInt = _.random(1000)
 console.log(`Random Number: ${randomInt}`)
 ```
 
