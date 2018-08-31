@@ -1,8 +1,7 @@
 {
 	"info": {
+		"_postman_id": "029c5a1a-d349-4b96-88ae-dcfbf619c51a",
 		"name": "Restful_Booker_Collection",
-		"_postman_id": "9683276e-d6a9-206d-9a1e-98a7338397f7",
-		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -40,7 +39,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/ping",
 							"host": [
@@ -75,7 +77,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking",
 							"host": [
@@ -104,7 +109,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking?firstname=sally&lastname=brown&checkin=2017-11-11&checkout=2017-11-15",
 							"host": [
@@ -116,23 +124,19 @@
 							"query": [
 								{
 									"key": "firstname",
-									"value": "sally",
-									"equals": true
+									"value": "sally"
 								},
 								{
 									"key": "lastname",
-									"value": "brown",
-									"equals": true
+									"value": "brown"
 								},
 								{
 									"key": "checkin",
-									"value": "2017-11-11",
-									"equals": true
+									"value": "2017-11-11"
 								},
 								{
 									"key": "checkout",
-									"value": "2017-11-15",
-									"equals": true
+									"value": "2017-11-15"
 								}
 							]
 						}
@@ -155,7 +159,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking?firstname=sally&lastname=brown",
 							"host": [
@@ -167,13 +174,11 @@
 							"query": [
 								{
 									"key": "firstname",
-									"value": "sally",
-									"equals": true
+									"value": "sally"
 								},
 								{
 									"key": "lastname",
-									"value": "brown",
-									"equals": true
+									"value": "brown"
 								}
 							]
 						}
@@ -198,7 +203,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking?firstname=sally",
 							"host": [
@@ -210,8 +218,7 @@
 							"query": [
 								{
 									"key": "firstname",
-									"value": "sally",
-									"equals": true
+									"value": "sally"
 								}
 							]
 						}
@@ -234,7 +241,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking?lastname=brown",
 							"host": [
@@ -246,8 +256,7 @@
 							"query": [
 								{
 									"key": "lastname",
-									"value": "brown",
-									"equals": true
+									"value": "brown"
 								}
 							]
 						}
@@ -270,7 +279,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking?checkin=2017-11-11",
 							"host": [
@@ -282,8 +294,7 @@
 							"query": [
 								{
 									"key": "checkin",
-									"value": "2017-11-11",
-									"equals": true
+									"value": "2017-11-11"
 								}
 							]
 						}
@@ -306,7 +317,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking?checkout=2017-11-11",
 							"host": [
@@ -318,8 +332,7 @@
 							"query": [
 								{
 									"key": "checkout",
-									"value": "2017-11-11",
-									"equals": true
+									"value": "2017-11-11"
 								}
 							]
 						}
@@ -354,7 +367,10 @@
 								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking/1",
 							"host": [
@@ -389,7 +405,10 @@
 								"value": "application/xml"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking/1",
 							"host": [
@@ -409,10 +428,10 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "e8cda791-42de-4b88-8b15-669fea4204a1",
+								"id": "87aa1fc1-66cf-4596-bb6e-ec84494274bd",
 								"type": "text/javascript",
 								"exec": [
-									"pm.environment.set(\"booking_id\", Math.floor((Math.random() * 10) + 1))"
+									"pm.environment.set(\"booking_id\", _.random(1,10))"
 								]
 							}
 						},
@@ -434,7 +453,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseURL}}/booking/{{booking_id}}",
 							"host": [
@@ -492,7 +514,6 @@
 		},
 		{
 			"name": "Create a new booking",
-			"description": "",
 			"item": [
 				{
 					"name": "Create a new booking with JSON",
