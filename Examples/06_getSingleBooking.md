@@ -61,12 +61,12 @@ With the `application/xml` header set, you can see that the following response i
 <?xml version='1.0'?>
 <booking>
     <firstname>Susan</firstname>
-    <lastname>Wilson</lastname>
-    <totalprice>594</totalprice>
-    <depositpaid>false</depositpaid>
+    <lastname>Jackson</lastname>
+    <totalprice>898</totalprice>
+    <depositpaid>true</depositpaid>
     <bookingdates>
-        <checkin>2017-09-02</checkin>
-        <checkout>2017-10-12</checkout>
+        <checkin>2016-10-25</checkin>
+        <checkout>2018-02-27</checkout>
     </bookingdates>
     <additionalneeds>Breakfast</additionalneeds>
 </booking>
@@ -96,7 +96,7 @@ This is probably my favourite Postman feature, I'm going to be spending a whole 
 _.random(1,10)
 ```
 
-To show you what's going on with this `_.random()` feature, I've logged out the created value, in the Postman Console. As you can see, the numbers returned are all between `1` and `10`. The numbers that you pass the `_.random` function are the lower and upper ranges so this can be used to created any range that you need. A really handy feature!! :)
+To show you what's going on with this `_.random()` feature, I've logged out the created value, in the Postman Console. As you can see, the numbers returned are all between `1` and `10`. The numbers that you pass the `_.random` function are the lower and upper ranges so this could be used to create any range that you need. A really handy feature!! :)
 
 ![Console Log Random Number](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/06_getSingleBooking/Console_Log_Random_Number.PNG)
 
