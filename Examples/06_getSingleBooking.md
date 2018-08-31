@@ -60,7 +60,7 @@ With the `application/xml` header set, you can see that the following response i
 ```xml
 <?xml version='1.0'?>
 <booking>
-    <firstname>Susan</firstname>
+    <firstname>Sally</firstname>
     <lastname>Jackson</lastname>
     <totalprice>898</totalprice>
     <depositpaid>true</depositpaid>
