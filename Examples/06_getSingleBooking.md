@@ -18,7 +18,7 @@ The endpoint takes an `id` parameter value in the request, we know from the `/bo
 
 We have our list of available id's from the previous request, we're going to use the first `id` in the request to the `/booking/{id}` endpoint and explore the data returned in the response.
 
-In the clip below, I am sending the following request `{{baseURL}}/booking/7` - The `baseURL` value is set in the _Restful_Booker_Environment_ file.
+In the clip below, I am sending the following request `{{baseURL}}/booking/10` - The `baseURL` value is set in the _Restful_Booker_Environment_ file.
 
 ![Get Single Booking](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/06_getSingleBooking/Get_A_Single_Booking.gif)
 
@@ -27,12 +27,12 @@ The request gave us the following response data back in a [`JSON`](https://en.wi
 ```json
 {
     "firstname": "Sally",
-    "lastname": "Wilson",
-    "totalprice": 594,
-    "depositpaid": false,
+    "lastname": "Jackson",
+    "totalprice": 898,
+    "depositpaid": true,
     "bookingdates": {
-        "checkin": "2017-09-02",
-        "checkout": "2017-10-12"
+        "checkin": "2016-10-25",
+        "checkout": "2018-02-27"
     },
     "additionalneeds": "Breakfast"
 }
@@ -48,10 +48,10 @@ In the last example we looked at using [`Preset Headers`](https://github.com/Dan
 Adding a new header is straight forward enough:
 
 - In the Request Builder view, select the `Headers` tab
-- Add `Accept` in the `New key` text field
+- Add `Accept` in the `Key` text field
 - Add `application/xml` to the `Value` field next to the key
 
-You will notice as you type into the fields that there is a handy auto-complete feature, this displays several options available to you.
+You will notice as you type into the fields, there is a handy auto-complete feature, this displays several options available to you.
 
 ![Add Request Header](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/06_getSingleBooking/Add_Request_Header.gif)
 
@@ -90,15 +90,15 @@ That's an interesting response back when using a different `Accept` header - `41
 
 > "Pre-request scripts are snippets of code associated with a collection request that are executed before the request is sent. This is perfect for use-cases like including the timestamp in the request headers or sending a random alphanumeric string in the URL parameters."
 
-This is probably my favourite Postman feature, I'm going to be spending a whole bunch of time creating examples for this because it can be used in so many useful ways. For this introduction, I'm going to show you how we can use it to make our requests to the `/booking/{id}` endpoint slightly more dynamic. The default number of booking id's returned from the `/booking` endpoint is _normally_ `10`. What we are going to do is use a tiny bit of JavaScript to create a random number between 1 and 10, to be used it our request.
+This is probably my favourite Postman feature, I'm going to be spending a whole bunch of time creating future examples for this feature because it can be used in so many useful ways. For this introduction, I'm going to show you how we can use it to make our requests to the `/booking/{id}` endpoint slightly more dynamic. The default total number of booking id's returned from the `/booking` endpoint is _normally_ `10`. What we are going to do is use one of the built in [Lodash](https://lodash.com/docs/4.17.10#random) functions to create a random number between 1 and 10, then use that value in our request. I'm going to be covering the built in modules it a later example so don't worry if this is a little bit confusing. :)
 
 ```Javascript
-Math.floor((Math.random() * 10) + 1)
+_.random(1,10)
 ```
 
-I'm using the Chrome Browser Dev Tools to `console.log()` the result of the code snippet, each time it runs. Just to show you the number changing.
+To show you what's going on with this `_.random()` feature, I've logged out the created value, in the Postman Console. As you can see, the numbers returned are all between `1` and `10`. The numbers that you pass the `_.random` function are the lower and upper ranges so this can be used to created any range that you need. A really handy feature!! :)
 
-![Random Number](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/06_getSingleBooking/Random_Number.gif)
+![Console Log Random Number](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/06_getSingleBooking/Console_Log_Random_Number.PNG)
 
 The `Pre-request Script` feature is basically just a little JavaScript IDE...ish, the code above is simple and it just generates a random number. There are lots of handy JavaScript tutorials where you can learn the basics on the [W3schools](https://www.w3schools.com/js/default.asp) website. We have the code to _create_ the value so how can we use this in a request?
 
@@ -112,7 +112,7 @@ In the request URL, we can use the `{{booking_id}}` syntax to set the variable v
 
 ![Dynamic Request](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/gifs/06_getSingleBooking/Dynamic_Request.gif)
 
-That's the end of this example. We have learnt how to use request headers to change the data in the response and we have also taken a super quick look at pre-request scripts. More to come on those very soon, It's a great feature of Postman and I want to write a few single examples on that feature to do it justice. See you soon.
+That's the end of this example. We have learnt how to use request headers to change the data in the response and we have also taken a super quick look at pre-request scripts. More to come on those very soon, It's a great feature of Postman and I want to write a few single examples on that feature to do it justice.
 
 ---
 [Back to the Examples](https://github.com/DannyDainton/All-Things-Postman#example-guides)
