@@ -9,10 +9,13 @@ We will continue to use the `/booking/{id}` endpoint on the Restful-Booker API, 
 ```javascript
 // This checks the status code number
 pm.test("Test 1: 200 Status Code", () => pm.response.to.have.status(200))
+
 // This checks the status text string
 pm.test('Test 2: 200 Status Code', () => pm.response.to.have.status('OK'))
+
 // This is using a pre-defined rule offered by Postman
 pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok)
+
 // This is using a different rule offered by Postman (.code) and checking that it equals 200
 pm.test('Test 4: 200 Status Code', () => pm.expect(pm.response.code).to.equal(200))
 ```
