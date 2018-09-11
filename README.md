@@ -46,7 +46,7 @@ All the requests that we will be making, will be included in a `collection` file
 - Newman command line collection runner
 - Postman Console
 - Using some built in modules like `moment` and `Lodash`
-- Many many more...
+- Many more...
 
 The format will take the form of a series of individual pages where I will explain in a bit more detail what I'm actually doing in Postman when making the requests and this will be backed up by images, gifs, code snippets etc. to try and make the information come to life. I'm a Tester so you can expect me to make observations along the way and I will be noting these down but the main focus of the examples we always be, using Postman and it's features to request data from the Restful-Booker API.
 
@@ -58,7 +58,7 @@ It will be an ever evolving space so if you would like me to add details coverin
 
 All requests in the examples will be made to the Restful-Booker API - You can find the available endpoints [here](https://restful-booker.herokuapp.com/apidoc/index.html).
 
-### **Current Postman version being used:** _6.2.5 Windows x64_
+### **Current Postman version being used:** _6.3.0 Windows x64_ - [Release Notes](https://www.getpostman.com/apps#changelog)
 
 ### 01 `GET` /ping
 
@@ -135,13 +135,11 @@ In this example we will be looking a bit closer at the `Collection Runner` which
 ---
 ### More examples to follow shortly...
 
-Upcoming examples will include:
-- Data driven requests from the `Collection Runner`
-- Request Workflows
-- Collection and Sub-Folder level elements
-- Basic Authentication
-- Mocks
-- Creating documentation for your API
-- And a few more...
+As well as this repository, I have also continued to blog about some additional Postman features:
+- [Hold on, wait a moment...](https://dannydainton.com/2018/05/21/hold-on-wait-a-moment/)
+- [Dynamically unset Postman Environment Variables](https://dannydainton.com/2018/06/28/dynamically-unset-postman-environment-variables/)
+- [Postman and Lodash - The perfect partnership](https://dannydainton.com/2018/09/01/postman-and-lodash-the-perfect-partnership/)
+- [Postman - The Bearer of good news](https://dannydainton.com/2018/09/10/postman-the-bearer-of-good-news/)
+- [Using Newman to run a collection of requests through TravisCI](https://github.com/DannyDainton/postman-travisci-example)
 
-As always, I'm available to chat over on Twitter `@dannydainton` and I've recently started answering questions on Stackoverflow under the `postman` tag, so if you do have a specific problem, just jump over to there and I'll try my best to help :)
+I'm always available to chat over on Twitter [@dannydainton](https://twitter.com/DannyDainton) and I've recently started answering questions on Stackoverflow under the [postman](https://stackoverflow.com/questions/tagged/postman) tag, so if you do have a specific problem, just jump over to there and I'll try my best to help :)
