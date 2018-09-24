@@ -8,7 +8,9 @@ A simple route such as `/ping` is a cheap way of providing quick feedback about 
 
 ![Grafana Heartbeat](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/01_pingTheAPI/Grafana_Heartbeat.PNG)
 
-The grafana dashboard is one way of displaying a health check status but a more basic form can be achieved right in the browser. In Chrome, Press `F12` to display the developer tools, Using the `Console` tab you can paste in the basic JavaScript code below and it will create the `IsItAlive` variable.
+The grafana dashboard is one way of displaying a health check status but a more basic form can be achieved right in the browser. The example below is just a very crude and simple way that a health check 'ping' could work.
+
+In Chrome, Press `F12` to display the developer tools, Using the `Console` tab you can paste in the basic JavaScript code below and it will create the `IsItAlive` variable. The code snippet below is using [jquery syntax](https://api.jquery.com/jQuery.get/#jQuery-get-url-data-success-dataType) that is supported in most browsers.
 
 ```javascript
 const IsItAlive = () => {
