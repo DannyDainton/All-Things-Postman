@@ -142,5 +142,6 @@ As well as this repository, I have also continued to blog about some additional 
 - [Postman - The Bearer of good news](https://dannydainton.com/2018/09/10/postman-the-bearer-of-good-news/)
 - [Using Newman to run a collection of requests through TravisCI](https://github.com/DannyDainton/postman-travisci-example)
 - [Running Postman Collections with Docker and creating custom HTML reports](https://github.com/DannyDainton/postman-docker)
+- [A basic node express app for running Postman Collection from a Slack Channel](https://github.com/DannyDainton/basic-newman-slack-bot)
 
 I'm always available to chat over on Twitter [@dannydainton](https://twitter.com/DannyDainton) and I've recently started answering questions on Stackoverflow under the [postman](https://stackoverflow.com/questions/tagged/postman) tag, so if you do have a specific problem, just jump over to there and I'll try my best to help :)
