@@ -46,7 +46,12 @@ All the requests that we will be making, will be included in a `collection` file
 - Newman command line collection runner
 - Postman Console
 - Using some built in modules like `moment` and `Lodash`
-- Many more...
+- Data Driven Tests
+- Forking and Merging Collections
+- Workspaces
+- Monitoring
+- Creating Mocks
+- And many more...
 
 The format will take the form of a series of individual pages where I will explain in a bit more detail what I'm actually doing in Postman when making the requests and this will be backed up by images, gifs, code snippets etc. to try and make the information come to life. I'm a Tester so you can expect me to make observations along the way and I will be noting these down but the main focus of the examples we always be, using Postman and it's features to request data from the Restful-Booker API.
 
@@ -135,6 +140,8 @@ In this example we will be looking a bit closer at the `Collection Runner` which
 ---
 ### More examples to follow shortly...
 
+I've been a bit absent from this project for a while and the Postman application has moved on quite quickly without me :( - Have no fear, I will be expanding on the current examples and creating new ones that include some of the awesome features that have been added recently!! If there is something here that you're not sure about or you want to have a chat through - Please do grab me, I'm always here to talk!! :) 
+
 As well as this repository, I have also continued to blog about some additional Postman features:
 - [Hold on, wait a moment...](https://dannydainton.com/2018/05/21/hold-on-wait-a-moment/)
 - [Dynamically unset Postman Environment Variables](https://dannydainton.com/2018/06/28/dynamically-unset-postman-environment-variables/)
@@ -143,5 +150,6 @@ As well as this repository, I have also continued to blog about some additional 
 - [Using Newman to run a collection of requests through TravisCI](https://github.com/DannyDainton/postman-travisci-example)
 - [Running Postman Collections with Docker and creating custom HTML reports](https://github.com/DannyDainton/postman-docker)
 - [A basic node express app for running Postman Collection from a Slack Channel](https://github.com/DannyDainton/basic-newman-slack-bot)
+-[A new HTML reporter for Newman offering a few extra features on top of the standard one ](https://github.com/DannyDainton/newman-reporter-htmlextra)
 
 I'm always available to chat over on Twitter [@dannydainton](https://twitter.com/DannyDainton) and I've recently started answering questions on Stackoverflow under the [postman](https://stackoverflow.com/questions/tagged/postman) tag, so if you do have a specific problem, just jump over to there and I'll try my best to help :)
