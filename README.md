@@ -10,11 +10,11 @@ My goal is to create a space where I can show examples of some of the many featu
 
 You can keep up to date with these changes via the [Change Log](https://www.getpostman.com/apps#changelog) and by subscribing to the Postman [Blog](http://blog.getpostman.com/).
 
-One of the main reasons why I'm a fan of the tool is the supporting [documentation](https://www.getpostman.com/docs/) that has been created - Although I will be covering some of the same features I will be including usable content that you can import into your own instance and work through the example at a pace that suits you.
+One of the main reasons why I'm a huge advocate of the tool, is the supporting [documentation and learning guides](https://www.getpostman.com/docs/) that have been created - Although I will be covering some of the same features, I will be including usable content that you can import into your own instance and work through the example at a pace that suits you.
 
 ---
 
-Before I start explaining the many different amazing and wonderful features of Postman, I just wanted to share a couple of links to some alternative REST clients - Just to prove that I'm not completely bias towards Postman :)
+Before I start explaining the many different amazing and wonderful features of Postman, I just wanted to share a few links to some alternative REST clients - Just to prove that I'm not 100% bias towards Postman :)
 
 ## [Insomnia](https://insomnia.rest/)
 A similar tool to Postman and packed full of cool features. The ability to filter the response data is awesome! [Alan Richardson](https://twitter.com/eviltester) Created a great video explaining some of the features of the tool [3 Reasons to use Insomnia REST Client in your Exploratory API Testing](https://youtu.be/ErDCN_oU9a8).
@@ -22,13 +22,19 @@ A similar tool to Postman and packed full of cool features. The ability to filte
 ## [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 [VSCode](https://code.visualstudio.com/) extension giving you the ability to make API requests from inside the editor. Really cool!
 
-These are both excellent REST clients and well worth checking out - Ultimately, It's all down to personal preference and It's completely up to you, to find what meets your own requirement, in your given context.
+## [Paw](https://paw.cloud/)
+Paw is a full-featured HTTP client that lets you test and describe the APIs you build or consume. It has a beautiful native macOS interface to compose requests, inspect server responses, generate client code and export API definitions.
+
+## [Restlet](https://restlet.com/modules/client/)
+Restlet Client is the most popular REST client available as a Chrome extension. It automatically updates itself, can be opened in one or several browser tabs and comes with a convenient browser toolbar icon.
+
+These are all excellent REST clients and well worth checking out - Ultimately, It's all down to personal preference and It's completely up to you, to find what meets your own requirements, in your given context.
 
 ---
 
 ## Let's get started!
 
-I've made a huge assumption that if you're reading this you will probably have Postman downloaded and installed on your machine already - If you don't that is not a problem, just head over to the [Postman](https://www.getpostman.com/) site and grab the flavour that suits your OS. Once you're done - Be sure to come back again. :)
+I've made a huge assumption that if you're reading this you will probably have Postman downloaded and installed on your machine already - If you don't that is not a problem, just head over to the [Postman](https://www.getpostman.com/downloads/) site and grab the flavour that suits your OS. Once you're done - Be sure to come back again. :)
 
 The tool on it's own is quite useless, in order for us to start having some fun and making requests, we need an API with some endpoints that will return some data - This is where a wonderful resource provided by [Mark Winteringham](https://twitter.com/2bittester) comes in handy! Mark has created [Restful-Booker](https://restful-booker.herokuapp.com/), a safe place for people to learn more about API testing and a active platform to try out tools like Postman or any of the other REST clients mentioned.
 
@@ -151,5 +157,6 @@ As well as this repository, I have also continued to blog about some additional 
 - [Running Postman Collections with Docker and creating custom HTML reports](https://github.com/DannyDainton/postman-docker)
 - [A basic node express app for running Postman Collection from a Slack Channel](https://github.com/DannyDainton/basic-newman-slack-bot)
 - [A new HTML reporter for Newman offering a few extra features on top of the standard one](https://github.com/DannyDainton/newman-reporter-htmlextra)
+- [An intro into how you can start creating your own custom HTML reports](https://dannydainton.com/2019/02/10/dont-let-go-of-the-handlebars/)
 
-I'm always available to chat over on Twitter [@dannydainton](https://twitter.com/DannyDainton) and I've recently started answering questions on Stackoverflow under the [postman](https://stackoverflow.com/questions/tagged/postman) tag, so if you do have a specific problem, just jump over to there and I'll try my best to help :)
+I'm always available to chat over on Twitter [@dannydainton](https://twitter.com/DannyDainton) and I've started answering questions on Stackoverflow under the [postman](https://stackoverflow.com/questions/tagged/postman) tag, so if you do have a specific problem, just jump over to there and I'll try my best to help :)
