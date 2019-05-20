@@ -1,6 +1,20 @@
 # All-Things-Postman
 
-![Postman Logo](https://github.com/DannyDainton/All-Things-Postman/blob/master/Public/images/_README/Postman_Logo.PNG)  
+![Postman Logo](./Public/images/_README/Postman_Logo.PNG)  
+
+**Update:** 
+
+It's been very difficult for me to keep this repo up to date, with the current version. Since creating this repo my professional life has changed _a lot_ - I'm now working full time for Postman and my efforts have all been about learning a new role and contributing to the whole Postman project, in a number of other different ways.
+
+That change has had a huge impact on what I wanted to initially achieve with this repo, I'm still going to chip away at it and try and keep things up to date but as new UI changes and new functionality is being added all the time, it kinda gets away from me.
+
+I still believe that the examples and the approaches within them are still valuable to Postman users but the media content is getting slightly dated and _might_ look slightly different from the current UI. Once I'm in a good place, time wise, I will be updating this repo with more examples.
+
+If there is anything that you would like help with or need some more information about, I would recommend dropping a message onto our [community site](https://community.getpostman.com). It's growing all the time and it currently has some very valuable information within multiple Postman specific topics.
+
+Thank you for all the support so far, means a lot to me! :)
+
+---
 
 ## Why create this repository?
 
@@ -70,6 +84,8 @@ It will be an ever evolving space so if you would like me to add details coverin
 All requests in the examples will be made to the Restful-Booker API - You can find the available endpoints [here](https://restful-booker.herokuapp.com/apidoc/index.html).
 
 ### **Current Postman version being used:** _6.3.0 Windows x64_ - [Release Notes](https://www.getpostman.com/apps#changelog)
+
+- I'm currently using version 7 on the MacOS but the images and gifs were created with the version and OS listed above so I won't change this until I fully update the repo.
 
 ### 01 `GET` /ping
 
@@ -145,8 +161,6 @@ In this example we will be looking a bit closer at the `Collection Runner` which
 
 ---
 ### More examples to follow shortly...
-
-I've been a bit absent from this project for a while and the Postman application has moved on quite quickly without me :( - Have no fear, I will be expanding on the current examples and creating new ones that include some of the awesome features that have been added recently!! If there is something here that you're not sure about or you want to have a chat through - Please do grab me, I'm always here to talk!! :) 
 
 As well as this repository, I have also continued to blog about some additional Postman features:
 - [Hold on, wait a moment...](https://dannydainton.com/2018/05/21/hold-on-wait-a-moment/)
