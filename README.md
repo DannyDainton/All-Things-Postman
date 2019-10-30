@@ -10,6 +10,8 @@ That change has had a huge impact on what I wanted to initially achieve with thi
 
 I still believe that the examples and the approaches within them are still valuable to Postman users but the media content is getting slightly dated and _might_ look slightly different from the current UI. Once I'm in a good place, time wise, I will be updating this repo with more examples.
 
+There is a great new _Intro to Postman_ series on Postman's YouTube Channel created by [Valentin Despa](https://www.youtube.com/channel/UCUUl_HXJjU--iYjUkIgEcTw) which is well worth checking out of you're just getting started with Postman - https://www.youtube.com/playlist?list=PLM-7VG-sgbtAgGq_pef5y_ruIUBPpUgNJ
+
 If there is anything that you would like help with or need some more information about, I would recommend dropping a message onto our [community site](https://community.getpostman.com). It's growing all the time and it currently has some very valuable information within multiple Postman specific topics.
 
 Thank you for all the support so far, means a lot to me! :)
@@ -22,7 +24,7 @@ I've been using [Postman](https://getpostman.com) for a while now and I'm still 
 
 My goal is to create a space where I can show examples of some of the many features in the tool and for it to also be a living piece of documentation, that will change over time to reflect the new changes being released.
 
-You can keep up to date with these changes via the [Change Log](https://www.getpostman.com/apps#changelog) and by subscribing to the Postman [Blog](http://blog.getpostman.com/).
+You can keep up to date with these changes via the [Release Notes](https://www.getpostman.com/downloads/release-notes) and by subscribing to the Postman [Blog](http://blog.getpostman.com/). As well as these, there is also have a [Better Practices](https://medium.com/better-practices) Medium site full of really cool Postman usecases.
 
 One of the main reasons why I'm a huge advocate of the tool, is the supporting [documentation and learning guides](https://www.getpostman.com/docs/) that have been created - Although I will be covering some of the same features, I will be including usable content that you can import into your own instance and work through the example at a pace that suits you.
 
